@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "language": "it",
+  "categories": {
+    "general": [{
+      "id": "it-general-001", "title": "Cultura generale 1", "difficulty": "normal",
+      "entries": [
+        ["ROMA", "Capitale d'Italia"], ["EURO", "Valuta usata da molti paesi dell'Unione europea"], ["SOLE", "Stella al centro del Sistema Solare"], ["CAFFÈ", "Bevanda popolare preparata con chicchi tostati"], ["INTERNET", "Rete globale che collega computer e dispositivi"], ["EUROPA", "Continente che comprende Italia, Francia e Germania"], ["PIANOFORTE", "Strumento musicale a tastiera"], ["ACQUA", "Liquido essenziale per la vita"], ["LIBRO", "Opera scritta o stampata destinata alla lettura"], ["LUNA", "Satellite naturale della Terra"], ["OROLOGIO", "Strumento che misura o indica il tempo"], ["OSSIGENO", "Gas necessario alla respirazione umana"]
+      ]
+    }],
+    "geography": [{
+      "id": "it-geography-001", "title": "Geografia 1", "difficulty": "normal",
+      "entries": [
+        ["ALPI", "Catena montuosa nel nord dell'Italia e in altri paesi europei"], ["DANUBIO", "Grande fiume europeo che attraversa diversi paesi"], ["SAHARA", "Grande deserto dell'Africa settentrionale"], ["AMAZZONI", "Grande fiume del Sud America"], ["PACIFICO", "Il più grande oceano della Terra"], ["AFRICA", "Continente a sud dell'Europa"], ["EUROPA", "Continente a ovest dell'Asia"], ["ASIA", "Il continente più grande"], ["NILO", "Famoso fiume che attraversa l'Egitto"], ["ADRIATICO", "Mare tra l'Italia e la penisola balcanica"], ["BALTICO", "Mare dell'Europa settentrionale"], ["ANDE", "Lunga catena montuosa del Sud America"]
+      ]
+    }],
+    "animals": [{
+      "id": "it-animals-001", "title": "Mondo animale 1", "difficulty": "normal",
+      "entries": [
+        ["ELEFANTE", "Il più grande animale terrestre vivente"], ["TIGRE", "Grande felino a strisce"], ["LEONE", "Grande felino il cui maschio ha spesso una criniera"], ["ZEBRA", "Animale africano a strisce bianche e nere"], ["DELFINO", "Intelligente mammifero marino"], ["LUPO", "Parente selvatico del cane"], ["ORSO", "Grande onnivoro dal folto mantello"], ["GUFO", "Uccello notturno dagli occhi grandi"], ["AQUILA", "Grande uccello rapace"], ["CAVALLO", "Animale spesso utilizzato per cavalcare"], ["GATTO", "Animale domestico che fa le fusa"], ["CANE", "Comune e fedele animale domestico"]
+      ]
+    }],
+    "sport": [{
+      "id": "it-sport-001", "title": "Sport 1", "difficulty": "normal",
+      "entries": [
+        ["CALCIO", "Sport di squadra con pallone e porte"], ["TENNIS", "Sport con racchetta giocato oltre una rete"], ["BASKET", "Sport in cui si lancia la palla dentro un canestro"], ["PALLAVOLO", "Sport di squadra giocato sopra una rete"], ["SCI", "Sport invernale praticato sulla neve"], ["NUOTO", "Sport praticato in acqua"], ["GOL", "Punto segnato mandando la palla nella porta"], ["RACCHETTA", "Attrezzo usato nel tennis"], ["STADIO", "Grande impianto sportivo con tribune"], ["MARATONA", "Corsa lunga 42,195 chilometri"], ["MEDAGLIA", "Premio assegnato spesso ai migliori atleti"], ["ALLENATORE", "Persona che prepara e guida gli sportivi"]
+      ]
+    }],
+    "history": [{
+      "id": "it-history-001", "title": "Storia 1", "difficulty": "normal",
+      "entries": [
+        ["ROMA", "Centro dell'antico Impero Romano"], ["EGITTO", "Antica civiltà sviluppata lungo il Nilo"], ["CESARE", "Nome con cui è noto il condottiero romano Giulio"], ["VICHINGO", "Navigatore scandinavo dell'alto Medioevo"], ["FARAONE", "Sovrano dell'antico Egitto"], ["RINASCIMENTO", "Epoca europea di rinnovamento artistico e culturale"], ["NAPOLEONE", "Condottiero e imperatore francese"], ["SPARTA", "Polis greca famosa per la tradizione guerriera"], ["ATENE", "Polis greca associata alle origini della democrazia"], ["COLOMBO", "Navigatore che raggiunse le Americhe nel 1492"], ["IMPERO", "Grande territorio governato da un'autorità sovrana centrale"], ["MEDIOEVO", "Periodo storico tra l'antichità e l'età moderna"]
+      ]
+    }],
+    "nature": [{
+      "id": "it-nature-001", "title": "Natura 1", "difficulty": "normal",
+      "entries": [
+        ["MONTAGNA", "Rilievo naturale elevato della superficie terrestre"], ["FIUME", "Corso d'acqua naturale che scorre verso un altro bacino"], ["LAGO", "Massa d'acqua interna circondata da terra"], ["OCEANO", "Enorme distesa di acqua salata"], ["FORESTA", "Vasta area ricoperta principalmente da alberi"], ["DESERTO", "Regione molto arida con poche precipitazioni"], ["VULCANO", "Apertura della crosta terrestre da cui può uscire lava"], ["GHIACCIAIO", "Grande massa di ghiaccio che si muove lentamente"], ["ISOLA", "Terra completamente circondata dall'acqua"], ["CASCATA", "Punto in cui l'acqua cade da un dislivello ripido"], ["VALLE", "Zona bassa tra colline o montagne"], ["COSTA", "Zona di contatto tra terra e mare"]
+      ]
+    }],
+    "film": [{
+      "id": "it-film-001", "title": "Film e TV 1", "difficulty": "normal",
+      "entries": [
+        ["TELECAMERA", "Dispositivo usato per registrare immagini video"], ["ATTORE", "Persona che interpreta un ruolo"], ["REGISTA", "Persona che dirige artisticamente un film"], ["SCENA", "Parte di un film ambientata in un determinato luogo o momento"], ["FILM", "Opera audiovisiva composta da immagini in movimento"], ["CINEMA", "Luogo dove i film vengono proiettati al pubblico"], ["OSCAR", "Celebre premio cinematografico statunitense"], ["TRAILER", "Breve anteprima promozionale di un film"], ["COSTUME", "Abbigliamento preparato per un personaggio"], ["MONTAGGIO", "Processo di organizzazione e unione delle riprese"], ["SCENEGGIATURA", "Testo scritto con trama, scene e dialoghi"], ["PRIMA", "Prima presentazione pubblica di un film o spettacolo"]
+      ]
+    }],
+    "music": [{
+      "id": "it-music-001", "title": "Musica 1", "difficulty": "normal",
+      "entries": [
+        ["CHITARRA", "Strumento a corde suonato pizzicando o facendo vibrare le corde"], ["PIANOFORTE", "Strumento a tastiera con corde e martelletti"], ["BATTERIA", "Insieme di strumenti a percussione usato in molte band"], ["VIOLINO", "Strumento ad arco con quattro corde"], ["CANZONE", "Composizione musicale destinata al canto"], ["RITMO", "Organizzazione temporale dei suoni e degli accenti"], ["MELODIA", "Successione di note che forma una linea musicale riconoscibile"], ["CONCERTO", "Esecuzione musicale pubblica"], ["ORCHESTRA", "Grande insieme di musicisti strumentisti"], ["CANTANTE", "Persona che esegue musica con la voce"], ["NOTA", "Segno o suono che rappresenta un'altezza musicale"], ["RITORNELLO", "Parte di una canzone che si ripete"]
+      ]
+    }],
+    "cars": [{
+      "id": "it-cars-001", "title": "Automobili 1", "difficulty": "normal",
+      "entries": [
+        ["MOTORE", "Macchina che fornisce la potenza per muovere un veicolo"], ["PNEUMATICO", "Parte in gomma della ruota a contatto con la strada"], ["FRENO", "Sistema usato per rallentare o fermare il veicolo"], ["VOLANTE", "Comando usato dal conducente per cambiare direzione"], ["CAMBIO", "Meccanismo che modifica i rapporti di trasmissione"], ["BATTERIA", "Unità che immagazzina energia elettrica nel veicolo"], ["BENZINA", "Carburante liquido per molti motori ad accensione comandata"], ["DIESEL", "Carburante per motori ad accensione per compressione"], ["PARAURTI", "Parte della carrozzeria davanti o dietro l'auto"], ["FARO", "Luce anteriore che illumina la strada"], ["RADIATORE", "Parte del sistema di raffreddamento che disperde calore"], ["TURBO", "Nome breve del turbocompressore"]
+      ]
+    }],
+    "science": [{
+      "id": "it-science-001", "title": "Scienza 1", "difficulty": "normal",
+      "entries": [
+        ["ATOMO", "Più piccola unità di un elemento che ne conserva le proprietà chimiche"], ["MOLECOLA", "Insieme di due o più atomi legati chimicamente"], ["PIANETA", "Corpo celeste che orbita attorno a una stella"], ["GALASSIA", "Grande sistema di stelle, gas, polveri e materia oscura"], ["GRAVITÀ", "Forza attrattiva tra corpi dotati di massa"], ["ENERGIA", "Grandezza fisica legata alla capacità di compiere lavoro"], ["OSSIGENO", "Elemento chimico con simbolo O"], ["IDROGENO", "Elemento chimico più leggero"], ["CELLULA", "Unità strutturale e funzionale di base degli organismi viventi"], ["GENE", "Unità di informazione ereditaria contenuta nel DNA"], ["LASER", "Dispositivo che produce luce coerente"], ["FOTONE", "Quanto di radiazione elettromagnetica"]
+      ]
+    }]
+  }
+}
