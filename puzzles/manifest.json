@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "languages": ["hr", "en", "de", "it", "es"],
   "categories": [
     "general",
@@ -13,14 +13,15 @@
     "cars",
     "science"
   ],
-  "preferredStorage": "puzzles/{language}/{category}.json",
+  "preferredStorage": "puzzles/{language}/{category}.json plus optional numbered shards such as {category}-2.json",
   "fallbackStorage": "puzzles/{language}/library.json",
   "currentPuzzleCounts": {
-    "hr": 30,
+    "hr": 100,
     "en": 10,
     "de": 10,
     "it": 10,
-    "es": 10
+    "es": 10,
+    "total": 140
   },
-  "notes": "Category files are loaded on demand so the library can grow without making users download every crossword. Older per-language library files remain as a compatibility fallback while the remaining languages are expanded."
+  "notes": "Category files are loaded on demand. The loader automatically merges numbered shards, allowing the library to grow without increasing the initial page payload. Older per-language library files remain as a compatibility fallback while the remaining languages are expanded."
 }
