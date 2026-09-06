@@ -20,8 +20,8 @@
     "en": 100,
     "de": 100,
     "it": 100,
-    "es": 10,
-    "total": 410
+    "es": 100,
+    "total": 500
   },
-  "notes": "Category files are loaded on demand. Croatian, English, German and Italian now each provide 10 puzzles in every category. The loader automatically merges numbered shards, allowing the library to grow without increasing the initial page payload. The older per-language library files remain as a compatibility fallback while Spanish is expanded."
+  "notes": "Category files are loaded on demand. All five supported languages now provide 10 puzzles in each of the 10 categories, for 100 ready-made crosswords per language and 500 total. The loader automatically merges numbered shards, allowing the library to grow without increasing the initial page payload. Older per-language library files remain available as a compatibility fallback."
 }
