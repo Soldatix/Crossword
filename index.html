@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apps&Games Crossword lets you create, solve, print and share custom crosswords in minutes.">
+  <meta name="keywords" content="crossword, crossword maker, crossword generator, križaljka, križaljke, Kreuzworträtsel, cruciverba, crucigrama">
+  <meta name="author" content="Apps&Games">
+  <meta name="theme-color" content="#101936">
+  <title>Apps&Games Crossword</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%23101936%22/><path d=%22M10 10h14v14H10zm15 15h14v14H25zm15 15h14v14H40zM40 10h14v14H40zM10 40h14v14H10z%22 fill=%22%2354e8ff%22/><path d=%22M25 10h14v14H25zM10 25h14v14H10zM40 25h14v14H40zM25 40h14v14H25z%22 fill=%22white%22/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="https://appsandgames.org/" aria-label="Apps & Games">
+        <span class="brand-mark" aria-hidden="true">A&amp;G</span>
+        <span class="brand-copy">
+          <strong>Apps&amp;Games</strong>
+          <span>Crossword</span>
+        </span>
+      </a>
+
+      <div class="top-actions">
+        <label class="compact-select">
+          <span class="sr-only" data-i18n="uiLanguage">Interface language</span>
+          <select id="uiLanguage" aria-label="Interface language">
+            <option value="hr">🇭🇷 Hrvatski</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="it">🇮🇹 Italiano</option>
+            <option value="es">🇪🇸 Español</option>
+          </select>
+        </label>
+
+        <label class="compact-select theme-select-wrap">
+          <span class="sr-only" data-i18n="theme">Theme</span>
+          <select id="themeMode" aria-label="Theme">
+            <option value="auto" data-i18n-option="themeAuto">Auto</option>
+            <option value="light" data-i18n-option="themeLight">Light</option>
+            <option value="dark" data-i18n-option="themeDark">Dark</option>
+          </select>
+        </label>
+
+        <button class="icon-button" id="instructionsButton" type="button" title="Instructions" aria-label="Instructions">?</button>
+        <button class="icon-button" id="infoButton" type="button" title="Info" aria-label="Info">i</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Apps&amp;Games Crossword</span>
+          <h1 data-i18n="heroTitle">Create crosswords in minutes</h1>
+          <p data-i18n="heroText">You choose the words and clues. Apps&amp;Games Crossword turns them into your custom crossword, ready to solve, print or share online.</p>
+        </div>
+        <div class="hero-badge" aria-hidden="true">
+          <div class="mini-grid">
+            <span></span><span></span><span class="on">C</span><span></span><span></span>
+            <span></span><span></span><span class="on">R</span><span></span><span></span>
+            <span class="on">W</span><span class="on">O</span><span class="on">R</span><span class="on">D</span><span></span>
+            <span></span><span></span><span class="on">S</span><span></span><span></span>
+            <span></span><span></span><span class="on">S</span><span></span><span></span>
+          </div>
+        </div>
+      </section>
+
+      <nav class="mode-tabs" aria-label="Crossword mode">
+        <button class="mode-tab active" data-mode="create" type="button"><span aria-hidden="true">✚</span><span data-i18n="createMode">Create Crossword</span></button>
+        <button class="mode-tab" data-mode="play" type="button"><span aria-hidden="true">▶</span><span data-i18n="playMode">Play Crossword</span></button>
+      </nav>
+
+      <section id="createPanel" class="workspace-panel active">
+        <div class="workspace-grid">
+          <aside class="editor-card card">
+            <div class="card-heading">
+              <div>
+                <h2 data-i18n="yourCrossword">Your crossword</h2>
+                <p data-i18n="creatorIntro">Enter words and clues. The generator will connect as many words as possible.</p>
+              </div>
+            </div>
+
+            <label class="field-label" for="crosswordTitle" data-i18n="crosswordTitle">Crossword title</label>
+            <input id="crosswordTitle" class="text-input" type="text" maxlength="80" placeholder="My crossword" data-i18n-placeholder="titlePlaceholder">
+
+            <div class="two-column-fields">
+              <label>
+                <span class="field-label" data-i18n="crosswordLanguage">Crossword language</span>
+                <select id="crosswordLanguage" class="text-input">
+                  <option value="hr">🇭🇷 Hrvatski</option>
+                  <option value="en">🇬🇧 English</option>
+                  <option value="de">🇩🇪 Deutsch</option>
+                  <option value="it">🇮🇹 Italiano</option>
+                  <option value="es">🇪🇸 Español</option>
+                </select>
+              </label>
+              <label>
+                <span class="field-label" data-i18n="difficulty">Difficulty</span>
+                <select id="difficulty" class="text-input">
+                  <option value="normal" data-i18n-option="difficultyNormal">Normal</option>
+                  <option value="easy" data-i18n-option="difficultyEasy">Easy</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="word-table-head">
+              <span data-i18n="answer">Answer</span>
+              <span data-i18n="clue">Clue</span>
+            </div>
+            <div id="wordRows" class="word-rows"></div>
+
+            <div class="editor-actions-row">
+              <button id="addRowButton" class="button secondary" type="button"><span aria-hidden="true">＋</span><span data-i18n="addWord">Add word</span></button>
+              <button id="exampleButton" class="button ghost" type="button" data-i18n="loadExample">Load example</button>
+              <button id="clearButton" class="button ghost danger-text" type="button" data-i18n="clearAll">Clear</button>
+            </div>
+
+            <div class="generate-wrap">
+              <button id="generateButton" class="button primary large" type="button"><span aria-hidden="true">✦</span><span data-i18n="generate">Generate crossword</span></button>
+            </div>
+            <div id="creatorMessage" class="message" role="status" aria-live="polite"></div>
+          </aside>
+
+          <section class="preview-card card">
+            <div class="preview-toolbar">
+              <div>
+                <h2 id="previewTitle" data-i18n="preview">Preview</h2>
+                <p id="previewMeta" class="muted" data-i18n="previewHint">Generate a crossword to see it here.</p>
+              </div>
+              <div class="toolbar-buttons">
+                <button id="reshuffleButton" class="button ghost compact hidden" type="button" data-i18n="rearrange">Rearrange</button>
+                <button id="solutionToggleButton" class="button ghost compact hidden" type="button" data-i18n="showSolution">Show solution</button>
+              </div>
+            </div>
+
+            <div id="emptyPreview" class="empty-state">
+              <div class="empty-icon" aria-hidden="true">▦</div>
+              <strong data-i18n="emptyTitle">Your crossword will appear here</strong>
+              <span data-i18n="emptyText">Add at least three words and choose Generate crossword.</span>
+            </div>
+
+            <div id="crosswordArea" class="crossword-area hidden">
+              <div class="grid-scroll">
+                <div id="crosswordGrid" class="crossword-grid" aria-label="Crossword grid"></div>
+              </div>
+              <div class="clues-layout">
+                <section>
+                  <h3><span aria-hidden="true">→</span> <span data-i18n="across">Across</span></h3>
+                  <ol id="acrossClues" class="clue-list"></ol>
+                </section>
+                <section>
+                  <h3><span aria-hidden="true">↓</span> <span data-i18n="down">Down</span></h3>
+                  <ol id="downClues" class="clue-list"></ol>
+                </section>
+              </div>
+
+              <div class="export-actions">
+                <button id="playGeneratedButton" class="button primary" type="button" data-i18n="playThis">Play this crossword</button>
+                <button id="printButton" class="button secondary" type="button">🖨 <span data-i18n="printPdf">Print / Save PDF</span></button>
+                <button id="shareButton" class="button secondary" type="button">🔗 <span data-i18n="share">Share</span></button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="playPanel" class="workspace-panel">
+        <div class="play-toolbar card">
+          <div>
+            <h2 data-i18n="playCrossword">Play Crossword</h2>
+            <p class="muted" data-i18n="playIntro">Choose a ready-made crossword or open one shared with you.</p>
+          </div>
+          <div class="play-picker">
+            <label>
+              <span class="field-label" data-i18n="puzzleLanguage">Puzzle language</span>
+              <select id="playLanguage" class="text-input">
+                <option value="hr">🇭🇷 Hrvatski</option>
+                <option value="en">🇬🇧 English</option>
+                <option value="de">🇩🇪 Deutsch</option>
+                <option value="it">🇮🇹 Italiano</option>
+                <option value="es">🇪🇸 Español</option>
+              </select>
+            </label>
+            <label>
+              <span class="field-label" data-i18n="category">Category</span>
+              <select id="playCategory" class="text-input"></select>
+            </label>
+            <button id="loadPuzzleButton" class="button secondary" type="button" data-i18n="loadPuzzle">Load puzzle</button>
+          </div>
+        </div>
+
+        <div id="playerCard" class="player-card card hidden">
+          <div class="player-heading">
+            <div>
+              <span id="playerCategoryBadge" class="pill"></span>
+              <h2 id="playerTitle"></h2>
+              <p id="playerProgressText" class="muted"></p>
+            </div>
+            <div class="player-actions-top">
+              <button id="hintButton" class="button ghost compact" type="button">💡 <span data-i18n="hint">Hint</span></button>
+              <button id="checkButton" class="button secondary compact" type="button">✓ <span data-i18n="check">Check</span></button>
+              <button id="revealButton" class="button ghost compact" type="button" data-i18n="reveal">Reveal solution</button>
+            </div>
+          </div>
+
+          <div class="player-layout">
+            <div class="grid-scroll player-grid-scroll">
+              <div id="playerGrid" class="crossword-grid interactive" aria-label="Playable crossword grid"></div>
+            </div>
+            <div class="player-clues">
+              <section>
+                <h3>→ <span data-i18n="across">Across</span></h3>
+                <ol id="playerAcross" class="clue-list clickable"></ol>
+              </section>
+              <section>
+                <h3>↓ <span data-i18n="down">Down</span></h3>
+                <ol id="playerDown" class="clue-list clickable"></ol>
+              </section>
+            </div>
+          </div>
+          <div id="playerMessage" class="message" role="status" aria-live="polite"></div>
+        </div>
+
+        <div id="playEmpty" class="empty-state card play-empty">
+          <div class="empty-icon" aria-hidden="true">✎</div>
+          <strong data-i18n="choosePuzzle">Choose a crossword to start</strong>
+          <span data-i18n="choosePuzzleText">Select a language and category, then load the puzzle.</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="currentYear"></span> Apps&amp;Games</span>
+      <a href="https://appsandgames.org/" data-i18n="backToPortal">Back to Apps & Games</a>
+    </footer>
+  </div>
+
+  <div id="modalBackdrop" class="modal-backdrop hidden"></div>
+
+  <aside id="instructionsPanel" class="modal-panel hidden" role="dialog" aria-modal="true" aria-labelledby="instructionsTitle">
+    <button class="modal-close" type="button" data-close-panel aria-label="Close">×</button>
+    <div class="modal-content">
+      <span class="eyebrow" data-i18n="instructionsEyebrow">Help</span>
+      <h2 id="instructionsTitle" data-i18n="instructionsTitle">How to use Apps&Games Crossword</h2>
+      <div id="instructionsContent" class="instructions-content"></div>
+    </div>
+  </aside>
+
+  <aside id="infoPanel" class="modal-panel info-panel hidden" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
+    <button class="modal-close" type="button" data-close-panel aria-label="Close">×</button>
+    <div class="modal-content">
+      <span class="eyebrow">Apps&amp;Games</span>
+      <h2 id="infoTitle" data-i18n="infoTitle">Info & Support</h2>
+      <p class="info-lead" data-i18n="infoLead">Apps&Games Crossword is a free browser app for creating, solving, printing and sharing crosswords.</p>
+
+      <div class="info-charity">
+        <strong data-i18n="supportProject">Support the project</strong>
+        <p data-i18n="charityText">A part of received donations is forwarded to charitable organizations, with the largest part intended for institutions caring for children without adequate parental care.</p>
+      </div>
+
+      <div class="payment-grid">
+        <article class="payment-card">
+          <div class="payment-brand"><span class="payment-icon">P</span><div><strong>PayPal</strong><small data-i18n="paypalSmall">Fast online donation</small></div></div>
+          <div class="payment-badges"><span>PayPal</span><span data-i18n="secure">Secure</span><span data-i18n="online">Online</span></div>
+          <a class="payment-action" href="https://www.paypal.com/ncp/payment/RU2CWCNVQ7XD6" target="_blank" rel="noopener" data-i18n="donatePaypal">Donate with PayPal</a>
+        </article>
+        <article class="payment-card stripe">
+          <div class="payment-brand"><span class="payment-icon">💳</span><div><strong data-i18n="cardPayment">Card payment</strong><small>Stripe</small></div></div>
+          <div class="payment-badges"><span>Visa</span><span>Mastercard</span><span data-i18n="secure">Secure</span></div>
+          <a class="payment-action" href="https://buy.stripe.com/7sYeVd7Blfe89cm0k02kw00" target="_blank" rel="noopener" data-i18n="donateCard">Donate by card</a>
+        </article>
+      </div>
+
+      <p class="payment-note" data-i18n="paymentNote">Payment is processed securely by the selected payment provider. Apps&Games does not store your payment card details.</p>
+
+      <section class="crypto-card">
+        <h3 data-i18n="cryptoTitle">Crypto Wallet</h3>
+        <p data-i18n="cryptoText">You can also support the project using one of the following wallet addresses.</p>
+        <div id="cryptoWallets" class="wallet-list"></div>
+      </section>
+    </div>
+  </aside>
+
+  <template id="wordRowTemplate">
+    <div class="word-row">
+      <input class="text-input answer-input" type="text" maxlength="30" autocomplete="off">
+      <input class="text-input clue-input" type="text" maxlength="140" autocomplete="off">
+      <button class="remove-row" type="button" aria-label="Remove word">×</button>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
