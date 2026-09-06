@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "language": "hr",
+  "categories": {
+    "general": [
+      {
+        "id": "hr-general-001",
+        "title": "Opće znanje 1",
+        "difficulty": "normal",
+        "entries": [
+          ["ZAGREB", "Glavni grad Hrvatske"],
+          ["EURO", "Službena valuta Hrvatske"],
+          ["JADRAN", "More uz hrvatsku obalu"],
+          ["SUNCE", "Zvijezda u središtu Sunčeva sustava"],
+          ["KAVA", "Popularni napitak od prženih zrna"],
+          ["INTERNET", "Globalna računalna mreža"],
+          ["EUROPA", "Kontinent na kojem se nalazi Hrvatska"],
+          ["KLAVIR", "Glazbalo s crnim i bijelim tipkama"],
+          ["VODA", "Tekućina nužna za život"],
+          ["KNJIGA", "Tiskano ili digitalno djelo za čitanje"],
+          ["MJESEC", "Prirodni satelit Zemlje"],
+          ["SAT", "Uređaj za mjerenje vremena"]
+        ]
+      }
+    ],
+    "geography": [
+      {
+        "id": "hr-geography-001",
+        "title": "Geografija 1",
+        "difficulty": "normal",
+        "entries": [
+          ["ALPE", "Planinski lanac koji prolazi kroz Švicarsku"],
+          ["DUNAV", "Velika europska rijeka koja protječe kroz više država"],
+          ["SAHARA", "Velika pustinja u sjevernoj Africi"],
+          ["AMAZON", "Velika rijeka u Južnoj Americi"],
+          ["PACIFIK", "Najveći ocean na Zemlji"],
+          ["AFRIKA", "Kontinent južno od Europe"],
+          ["EUROPA", "Kontinent na kojem se nalazi Hrvatska"],
+          ["AZIJA", "Najveći kontinent"],
+          ["NIL", "Poznata rijeka u Egiptu"],
+          ["JADRAN", "More između Italije i istočne obale Jadrana"],
+          ["BALTIK", "More na sjeveru Europe"],
+          ["ANDE", "Dugi planinski lanac u Južnoj Americi"]
+        ]
+      }
+    ],
+    "animals": [
+      {
+        "id": "hr-animals-001",
+        "title": "Svijet životinja 1",
+        "difficulty": "normal",
+        "entries": [
+          ["SLON", "Najveća kopnena životinja"],
+          ["TIGAR", "Velika prugasta mačka"],
+          ["LAV", "Velika mačka s grivom kod mužjaka"],
+          ["ZEBRA", "Afrička životinja crno-bijelih pruga"],
+          ["DELFIN", "Inteligentni morski sisavac"],
+          ["VUK", "Divlji srodnik psa"],
+          ["MEDVJED", "Veliki svejed s gustim krznom"],
+          ["SOVA", "Noćna ptica velikih očiju"],
+          ["ORAO", "Velika ptica grabljivica"],
+          ["KONJ", "Životinja koja se često koristi za jahanje"],
+          ["MAČKA", "Kućni ljubimac koji prede"],
+          ["PAS", "Čovjekov česti kućni ljubimac"]
+        ]
+      }
+    ],
+    "sport": [
+      {
+        "id": "hr-sport-001",
+        "title": "Sport 1",
+        "difficulty": "normal",
+        "entries": [
+          ["NOGOMET", "Sport u kojem se lopta pretežno igra nogama"],
+          ["TENIS", "Sport s reketom i mrežom"],
+          ["KOŠARKA", "Sport u kojem se lopta ubacuje kroz obruč"],
+          ["ODBOJKA", "Momčadski sport s mrežom"],
+          ["SKIJANJE", "Zimski sport na skijama"],
+          ["PLIVANJE", "Sport koji se odvija u vodi"],
+          ["GOL", "Pogodak u nogometu"],
+          ["REKET", "Oprema za tenis ili badminton"],
+          ["STADION", "Veliki sportski objekt s tribinama"],
+          ["MARATON", "Trkačka disciplina duga 42,195 kilometara"],
+          ["MEDALJA", "Nagrada za sportski plasman"],
+          ["TRENER", "Osoba koja vodi i priprema sportaše"]
+        ]
+      }
+    ],
+    "history": [
+      {
+        "id": "hr-history-001",
+        "title": "Povijest 1",
+        "difficulty": "normal",
+        "entries": [
+          ["RIM", "Središte antičkog Rimskog Carstva"],
+          ["EGIPAT", "Drevna civilizacija uz Nil"],
+          ["CEZAR", "Prezime slavnog rimskog vojskovođe Gaja Julija"],
+          ["VIKING", "Skandinavski pomorac i ratnik ranog srednjeg vijeka"],
+          ["FARAON", "Vladar drevnog Egipta"],
+          ["RENESANSA", "Europsko razdoblje preporoda umjetnosti i znanosti"],
+          ["NAPOLEON", "Francuski vojskovođa i car s početka 19. stoljeća"],
+          ["SPARTA", "Poznati ratnički polis antičke Grčke"],
+          ["ATENA", "Grčki polis poznat po demokraciji"],
+          ["KOLUMBO", "Pomorac koji je 1492. doplovio do Amerike"],
+          ["IMPERIJ", "Velika država pod vlašću cara ili središnje sile"],
+          ["SREDNJIVIJEK", "Povijesno razdoblje između antike i novog vijeka"]
+        ]
+      }
+    ],
+    "nature": [
+      {
+        "id": "hr-nature-001",
+        "title": "Priroda 1",
+        "difficulty": "normal",
+        "entries": [
+          ["PLANINA", "Visoko uzvišenje zemljine površine"],
+          ["RIJEKA", "Prirodni vodotok koji teče prema drugoj vodi"],
+          ["JEZERO", "Veća stajaća vodena površina okružena kopnom"],
+          ["OCEAN", "Najveća vrsta slane vodene površine"],
+          ["ŠUMA", "Veliko područje obraslo drvećem"],
+          ["PUSTINJA", "Vrlo suho područje s malo oborina"],
+          ["VULKAN", "Otvor u Zemljinoj kori iz kojeg može izlaziti lava"],
+          ["LEDENJAK", "Velika masa leda koja se polako kreće"],
+          ["OTOK", "Kopno potpuno okruženo vodom"],
+          ["SLAP", "Mjesto gdje voda pada preko strme prepreke"],
+          ["DOLINA", "Niže područje između uzvisina"],
+          ["OBALA", "Područje na dodiru kopna i mora ili jezera"]
+        ]
+      }
+    ],
+    "film": [
+      {
+        "id": "hr-film-001",
+        "title": "Film i TV 1",
+        "difficulty": "normal",
+        "entries": [
+          ["KAMERA", "Uređaj kojim se snima slika"],
+          ["GLUMAC", "Osoba koja tumači ulogu"],
+          ["REDATELJ", "Osoba koja umjetnički vodi snimanje filma"],
+          ["SCENA", "Dio filma koji se odvija u određenom vremenu i prostoru"],
+          ["FILM", "Audiovizualno djelo prikazano nizom pokretnih slika"],
+          ["KINO", "Mjesto za javno prikazivanje filmova"],
+          ["OSCAR", "Poznata američka filmska nagrada"],
+          ["TRAILER", "Kratki promotivni prikaz filma"],
+          ["KOSTIM", "Odjeća pripremljena za lik u filmu"],
+          ["MONTAŽA", "Postupak povezivanja snimljenih kadrova"],
+          ["SCENARIJ", "Pisani plan radnje, dijaloga i scena"],
+          ["PREMIJERA", "Prvo javno prikazivanje filma ili predstave"]
+        ]
+      }
+    ],
+    "music": [
+      {
+        "id": "hr-music-001",
+        "title": "Glazba 1",
+        "difficulty": "normal",
+        "entries": [
+          ["GITARA", "Žičano glazbalo koje se često svira prstima ili trzalicom"],
+          ["KLAVIR", "Glazbalo s tipkama i žicama"],
+          ["BUBNJEVI", "Skup udaraljki čest u rock i pop glazbi"],
+          ["VIOLINA", "Gudačko glazbalo s četiri žice"],
+          ["PJESMA", "Glazbeno djelo koje se može pjevati"],
+          ["RITAM", "Pravilna organizacija trajanja i naglasaka u glazbi"],
+          ["MELODIJA", "Slijed tonova koji tvori prepoznatljivu glazbenu cjelinu"],
+          ["KONCERT", "Javna glazbena izvedba"],
+          ["ORKESTAR", "Veliki sastav instrumentalnih glazbenika"],
+          ["PJEVAČ", "Osoba koja izvodi glazbu glasom"],
+          ["NOTA", "Grafički znak za glazbeni ton"],
+          ["REFREN", "Dio pjesme koji se ponavlja"]
+        ]
+      }
+    ],
+    "cars": [
+      {
+        "id": "hr-cars-001",
+        "title": "Automobili 1",
+        "difficulty": "normal",
+        "entries": [
+          ["MOTOR", "Stroj koji pretvara energiju u pogon vozila"],
+          ["GUMA", "Elastični vanjski dio kotača koji dodiruje cestu"],
+          ["KOČNICA", "Sustav za usporavanje i zaustavljanje vozila"],
+          ["VOLAN", "Upravljač kojim vozač mijenja smjer vozila"],
+          ["MJENJAČ", "Sklop koji mijenja prijenosni omjer između motora i kotača"],
+          ["AKUMULATOR", "Baterija koja napaja električne sustave vozila"],
+          ["BENZIN", "Tekuće gorivo za mnoge Ottove motore"],
+          ["DIZEL", "Gorivo i naziv vrste motora s kompresijskim paljenjem"],
+          ["BRANIK", "Dio karoserije na prednjem ili stražnjem kraju vozila"],
+          ["FAR", "Prednje svjetlo vozila"],
+          ["HLADNJAK", "Dio sustava koji pomaže odvoditi toplinu motora"],
+          ["TURBO", "Kolokvijalni naziv za turbopunjač"]
+        ]
+      }
+    ],
+    "science": [
+      {
+        "id": "hr-science-001",
+        "title": "Znanost 1",
+        "difficulty": "normal",
+        "entries": [
+          ["ATOM", "Najmanja jedinica kemijskog elementa koja zadržava njegova svojstva"],
+          ["MOLEKULA", "Skup dvaju ili više kemijski povezanih atoma"],
+          ["PLANET", "Nebesko tijelo koje kruži oko zvijezde"],
+          ["GALAKSIJA", "Velik sustav zvijezda, plina, prašine i tamne tvari"],
+          ["GRAVITACIJA", "Privlačna sila između tijela s masom"],
+          ["ENERGIJA", "Fizikalna veličina povezana sa sposobnošću obavljanja rada"],
+          ["KISIK", "Kemijski element oznake O"],
+          ["VODIK", "Najlakši kemijski element"],
+          ["STANICA", "Osnovna strukturna i funkcionalna jedinica živih organizama"],
+          ["GEN", "Dio nasljednog materijala koji nosi biološku informaciju"],
+          ["LASER", "Uređaj koji stvara koherentnu svjetlost"],
+          ["FOTON", "Kvant elektromagnetskog zračenja"]
+        ]
+      }
+    ]
+  }
+}
