@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "languages": ["hr", "en", "de", "it", "es"],
+  "categories": [
+    "general",
+    "geography",
+    "animals",
+    "sport",
+    "history",
+    "nature",
+    "film",
+    "music",
+    "cars",
+    "science"
+  ],
+  "storage": "puzzles/{language}/library.json",
+  "notes": "Each language library contains category arrays. New puzzles can be appended without changing the application code."
+}
