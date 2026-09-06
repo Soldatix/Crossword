@@ -40,9 +40,9 @@
     }
 
     try {
-      await loadScript('flags.js');
+      await loadScript('flags.js?v=2');
     } catch (error) {
-      console.warn('Crossword SVG language flags could not be loaded.', error);
+      console.warn('Crossword SVG language menu could not be loaded.', error);
     }
   }
 
