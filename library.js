@@ -8,6 +8,7 @@
   }
 
   const uiLanguage = document.getElementById('uiLanguage');
+  const crosswordLanguage = document.getElementById('crosswordLanguage');
   const playLanguage = document.getElementById('playLanguage');
   const playCategory = document.getElementById('playCategory');
   const loadButton = document.getElementById('loadPuzzleButton');
@@ -71,6 +72,16 @@
     });
     playCategory.value = previous;
     updateActiveCategoryBadge();
+  }
+
+  function syncPuzzleLanguagesToInterface() {
+    const lang = currentUiLanguage();
+    if (crosswordLanguage) {
+      crosswordLanguage.value = lang;
+      crosswordLanguage.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+    playLanguage.value = lang;
+    playLanguage.dispatchEvent(new Event('change', { bubbles: true }));
   }
 
   async function loadLanguageLibrary(lang) {
@@ -153,7 +164,12 @@
 
   loadButton.addEventListener('click', loadSelectedPuzzle, true);
   playLanguage.addEventListener('change', populateCategories);
-  uiLanguage?.addEventListener('change', () => setTimeout(populateCategories, 0));
+  uiLanguage?.addEventListener('change', () => {
+    setTimeout(() => {
+      syncPuzzleLanguagesToInterface();
+      populateCategories();
+    }, 0);
+  });
 
   populateCategories();
 })();
