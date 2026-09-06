@@ -12,6 +12,7 @@
   const playCategory = document.getElementById('playCategory');
   const loadButton = document.getElementById('loadPuzzleButton');
   const playerMessage = document.getElementById('playerMessage');
+  const playerCategoryBadge = document.getElementById('playerCategoryBadge');
 
   if (!playLanguage || !playCategory || !loadButton) return;
 
@@ -41,10 +42,21 @@
   };
 
   const cache = new Map();
+  let activeLibraryCategory = null;
 
   function currentUiLanguage() {
     const lang = uiLanguage?.value || document.documentElement.lang || 'en';
     return labels[lang] ? lang : 'en';
+  }
+
+  function categoryLabel(category) {
+    return labels[currentUiLanguage()]?.[category] || category;
+  }
+
+  function updateActiveCategoryBadge() {
+    if (playerCategoryBadge && activeLibraryCategory) {
+      playerCategoryBadge.textContent = categoryLabel(activeLibraryCategory);
+    }
   }
 
   function populateCategories() {
@@ -58,6 +70,7 @@
       playCategory.appendChild(option);
     });
     playCategory.value = previous;
+    updateActiveCategoryBadge();
   }
 
   async function loadLanguageLibrary(lang) {
@@ -127,7 +140,9 @@
       puzzle.libraryId = item.id;
       puzzle.difficulty = item.difficulty || 'normal';
       puzzle.sourceEntries = entries;
+      activeLibraryCategory = category;
       app.startPlayer(puzzle);
+      updateActiveCategoryBadge();
     } catch (error) {
       showLoadError(error);
     } finally {
