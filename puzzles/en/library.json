@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "language": "en",
+  "categories": {
+    "general": [{
+      "id": "en-general-001", "title": "General Knowledge 1", "difficulty": "normal",
+      "entries": [
+        ["LONDON", "Capital of the United Kingdom"], ["EURO", "Currency used by many European Union countries"], ["SUN", "Star at the center of the Solar System"], ["COFFEE", "Popular drink made from roasted beans"], ["INTERNET", "Global network connecting computers"], ["EUROPE", "Continent containing France and Germany"], ["PIANO", "Keyboard musical instrument"], ["WATER", "Liquid essential for life"], ["BOOK", "A written or printed work for reading"], ["MOON", "Earth's natural satellite"], ["CLOCK", "Device used to measure time"], ["OXYGEN", "Gas humans need for respiration"]
+      ]
+    }],
+    "geography": [{
+      "id": "en-geography-001", "title": "Geography 1", "difficulty": "normal",
+      "entries": [
+        ["ALPS", "Mountain range through Switzerland and neighboring countries"], ["DANUBE", "Major European river flowing through several countries"], ["SAHARA", "Large desert in North Africa"], ["AMAZON", "Major river in South America"], ["PACIFIC", "Largest ocean on Earth"], ["AFRICA", "Continent south of Europe"], ["EUROPE", "Continent west of Asia"], ["ASIA", "Largest continent"], ["NILE", "Famous river flowing through Egypt"], ["ADRIATIC", "Sea between Italy and the Balkan Peninsula"], ["BALTIC", "Sea in northern Europe"], ["ANDES", "Long mountain range in South America"]
+      ]
+    }],
+    "animals": [{
+      "id": "en-animals-001", "title": "Animal World 1", "difficulty": "normal",
+      "entries": [
+        ["ELEPHANT", "Largest land animal"], ["TIGER", "Large striped cat"], ["LION", "Large cat whose males typically have a mane"], ["ZEBRA", "African animal with black and white stripes"], ["DOLPHIN", "Intelligent marine mammal"], ["WOLF", "Wild relative of the dog"], ["BEAR", "Large furry omnivore"], ["OWL", "Nocturnal bird with large eyes"], ["EAGLE", "Large bird of prey"], ["HORSE", "Animal commonly used for riding"], ["CAT", "Domestic pet that purrs"], ["DOG", "Common loyal domestic companion"]
+      ]
+    }],
+    "sport": [{
+      "id": "en-sport-001", "title": "Sport 1", "difficulty": "normal",
+      "entries": [
+        ["FOOTBALL", "Team sport played with a ball and goals"], ["TENNIS", "Racket sport played across a net"], ["BASKETBALL", "Sport in which players shoot a ball through a hoop"], ["VOLLEYBALL", "Team sport played over a high net"], ["SKIING", "Winter sport performed on skis"], ["SWIMMING", "Sport performed in water"], ["GOAL", "A scoring target in football"], ["RACKET", "Equipment used in tennis"], ["STADIUM", "Large sports venue with spectator seating"], ["MARATHON", "Running race of 42.195 kilometers"], ["MEDAL", "Award often given for a top sports placing"], ["COACH", "Person who trains and guides athletes"]
+      ]
+    }],
+    "history": [{
+      "id": "en-history-001", "title": "History 1", "difficulty": "normal",
+      "entries": [
+        ["ROME", "Center of the ancient Roman Empire"], ["EGYPT", "Ancient civilization along the Nile"], ["CAESAR", "Surname of Roman leader Julius"], ["VIKING", "Scandinavian seafarer of the early medieval period"], ["PHARAOH", "Ruler of ancient Egypt"], ["RENAISSANCE", "European period of renewed art and learning"], ["NAPOLEON", "French military leader and emperor"], ["SPARTA", "Ancient Greek city-state known for its warriors"], ["ATHENS", "Ancient Greek city associated with early democracy"], ["COLUMBUS", "Explorer who reached the Americas in 1492"], ["EMPIRE", "Large territory ruled by a central sovereign power"], ["MIDDLEAGES", "Period between antiquity and the early modern era"]
+      ]
+    }],
+    "nature": [{
+      "id": "en-nature-001", "title": "Nature 1", "difficulty": "normal",
+      "entries": [
+        ["MOUNTAIN", "High natural elevation of the Earth's surface"], ["RIVER", "Natural flowing watercourse"], ["LAKE", "Body of standing water surrounded by land"], ["OCEAN", "Vast body of salt water"], ["FOREST", "Large area covered mainly with trees"], ["DESERT", "Very dry region with little rainfall"], ["VOLCANO", "Opening in Earth's crust that can erupt lava"], ["GLACIER", "Large mass of slowly moving ice"], ["ISLAND", "Land completely surrounded by water"], ["WATERFALL", "Place where a river drops over a steep edge"], ["VALLEY", "Low area between hills or mountains"], ["COAST", "Land along the edge of a sea or ocean"]
+      ]
+    }],
+    "film": [{
+      "id": "en-film-001", "title": "Film & TV 1", "difficulty": "normal",
+      "entries": [
+        ["CAMERA", "Device used to record images"], ["ACTOR", "Person who performs a role"], ["DIRECTOR", "Person who leads the artistic creation of a film"], ["SCENE", "Part of a film occurring in a particular setting"], ["MOVIE", "Motion-picture production"], ["CINEMA", "Place where films are shown to an audience"], ["OSCAR", "Well-known American film award"], ["TRAILER", "Short promotional preview of a film"], ["COSTUME", "Clothing designed for a screen character"], ["EDITING", "Process of arranging recorded shots"], ["SCRIPT", "Written text containing scenes and dialogue"], ["PREMIERE", "First public showing of a film"]
+      ]
+    }],
+    "music": [{
+      "id": "en-music-001", "title": "Music 1", "difficulty": "normal",
+      "entries": [
+        ["GUITAR", "String instrument often played by plucking or strumming"], ["PIANO", "Keyboard instrument with strings and hammers"], ["DRUMS", "Percussion instruments common in pop and rock music"], ["VIOLIN", "Four-string bowed instrument"], ["SONG", "Musical composition intended for singing"], ["RHYTHM", "Pattern of beats and durations in music"], ["MELODY", "Sequence of notes forming a recognizable musical line"], ["CONCERT", "Public musical performance"], ["ORCHESTRA", "Large group of instrumental musicians"], ["SINGER", "Person who performs music with the voice"], ["NOTE", "Symbol or sound representing a musical pitch"], ["CHORUS", "Repeated section of a song"]
+      ]
+    }],
+    "cars": [{
+      "id": "en-cars-001", "title": "Cars 1", "difficulty": "normal",
+      "entries": [
+        ["ENGINE", "Machine that provides power to move a vehicle"], ["TIRE", "Rubber part of a wheel that contacts the road"], ["BRAKE", "System used to slow or stop a vehicle"], ["STEERING", "System used to control a vehicle's direction"], ["GEARBOX", "Mechanism that changes transmission ratios"], ["BATTERY", "Electrical energy storage unit in a vehicle"], ["PETROL", "Liquid fuel used by many spark-ignition engines"], ["DIESEL", "Fuel used in compression-ignition engines"], ["BUMPER", "Protective body part at the front or rear of a car"], ["HEADLIGHT", "Front lamp used to illuminate the road"], ["RADIATOR", "Part of the cooling system that releases heat"], ["TURBO", "Short name for a turbocharger"]
+      ]
+    }],
+    "science": [{
+      "id": "en-science-001", "title": "Science 1", "difficulty": "normal",
+      "entries": [
+        ["ATOM", "Smallest unit of an element retaining its chemical properties"], ["MOLECULE", "Two or more atoms chemically bonded together"], ["PLANET", "Celestial body orbiting a star"], ["GALAXY", "Large system of stars, gas, dust and dark matter"], ["GRAVITY", "Attractive force between objects with mass"], ["ENERGY", "Physical quantity associated with the capacity to do work"], ["OXYGEN", "Chemical element with symbol O"], ["HYDROGEN", "Lightest chemical element"], ["CELL", "Basic structural and functional unit of living organisms"], ["GENE", "Unit of hereditary information in DNA"], ["LASER", "Device producing coherent light"], ["PHOTON", "Quantum of electromagnetic radiation"]
+      ]
+    }]
+  }
+}
