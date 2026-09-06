@@ -17,11 +17,11 @@
   "fallbackStorage": "puzzles/{language}/library.json",
   "currentPuzzleCounts": {
     "hr": 100,
-    "en": 10,
+    "en": 100,
     "de": 10,
     "it": 10,
     "es": 10,
-    "total": 140
+    "total": 230
   },
-  "notes": "Category files are loaded on demand. The loader automatically merges numbered shards, allowing the library to grow without increasing the initial page payload. Older per-language library files remain as a compatibility fallback while the remaining languages are expanded."
+  "notes": "Category files are loaded on demand. Croatian and English now each provide 10 puzzles in every category. The loader automatically merges numbered shards, allowing the library to grow without increasing the initial page payload. Older per-language library files remain as a compatibility fallback while German, Italian and Spanish are expanded."
 }
