@@ -13,6 +13,14 @@
     "cars",
     "science"
   ],
-  "storage": "puzzles/{language}/library.json",
-  "notes": "Each language library contains category arrays. New puzzles can be appended without changing the application code."
+  "preferredStorage": "puzzles/{language}/{category}.json",
+  "fallbackStorage": "puzzles/{language}/library.json",
+  "currentPuzzleCounts": {
+    "hr": 30,
+    "en": 10,
+    "de": 10,
+    "it": 10,
+    "es": 10
+  },
+  "notes": "Category files are loaded on demand so the library can grow without making users download every crossword. Older per-language library files remain as a compatibility fallback while the remaining languages are expanded."
 }
