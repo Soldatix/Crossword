@@ -102,22 +102,35 @@
     }
   }
 
+  async function fetchCategoryShard(lang, category, suffix = '') {
+    const url = `puzzles/${lang}/${category}${suffix}.json`;
+    const response = await fetch(url, { cache: 'no-cache' });
+    if (response.status === 404) return null;
+    if (!response.ok) throw new Error(`Category ${lang}/${category}${suffix}: HTTP ${response.status}`);
+    const data = await response.json();
+    if (!data || data.language !== lang || data.category !== category || !Array.isArray(data.puzzles)) {
+      throw new Error(`Category ${lang}/${category}${suffix}: invalid data`);
+    }
+    return data.puzzles;
+  }
+
   async function loadCategoryPuzzles(lang, category) {
     const key = `${lang}/${category}`;
     if (categoryCache.has(key)) return categoryCache.get(key);
 
     const promise = (async () => {
       try {
-        const response = await fetch(`puzzles/${lang}/${category}.json`, { cache: 'no-cache' });
-        if (response.ok) {
-          const data = await response.json();
-          if (!data || data.language !== lang || data.category !== category || !Array.isArray(data.puzzles)) {
-            throw new Error(`Category ${key}: invalid data`);
+        const base = await fetchCategoryShard(lang, category);
+        if (base) {
+          const combined = [...base];
+          for (let shard = 2; shard <= 20; shard++) {
+            const extra = await fetchCategoryShard(lang, category, `-${shard}`);
+            if (!extra) break;
+            combined.push(...extra);
           }
-          if (!data.puzzles.length) throw new Error(`Category ${key}: empty`);
-          return data.puzzles;
+          if (!combined.length) throw new Error(`Category ${key}: empty`);
+          return combined;
         }
-        if (response.status !== 404) throw new Error(`Category ${key}: HTTP ${response.status}`);
       } catch (error) {
         if (!(error instanceof TypeError)) throw error;
       }
