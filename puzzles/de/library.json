@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "language": "de",
+  "categories": {
+    "general": [{
+      "id": "de-general-001", "title": "Allgemeinwissen 1", "difficulty": "normal",
+      "entries": [
+        ["BERLIN", "Hauptstadt Deutschlands"], ["EURO", "Währung in vielen Ländern der Europäischen Union"], ["SONNE", "Stern im Zentrum unseres Sonnensystems"], ["KAFFEE", "Beliebtes Getränk aus gerösteten Bohnen"], ["INTERNET", "Weltweites Netzwerk von Computern"], ["EUROPA", "Kontinent mit Deutschland, Frankreich und Italien"], ["KLAVIER", "Musikinstrument mit schwarzen und weißen Tasten"], ["WASSER", "Für das Leben unverzichtbare Flüssigkeit"], ["BUCH", "Gedrucktes oder digitales Werk zum Lesen"], ["MOND", "Natürlicher Satellit der Erde"], ["UHR", "Gerät zur Anzeige oder Messung der Zeit"], ["SAUERSTOFF", "Gas, das Menschen zum Atmen benötigen"]
+      ]
+    }],
+    "geography": [{
+      "id": "de-geography-001", "title": "Geografie 1", "difficulty": "normal",
+      "entries": [
+        ["ALPEN", "Gebirge in der Schweiz, Österreich und weiteren Ländern"], ["DONAU", "Großer europäischer Fluss durch mehrere Staaten"], ["SAHARA", "Große Wüste in Nordafrika"], ["AMAZONAS", "Großer Fluss in Südamerika"], ["PAZIFIK", "Größter Ozean der Erde"], ["AFRIKA", "Kontinent südlich von Europa"], ["EUROPA", "Kontinent westlich von Asien"], ["ASIEN", "Größter Kontinent"], ["NIL", "Berühmter Fluss in Ägypten"], ["ADRIA", "Meer zwischen Italien und der Balkanhalbinsel"], ["OSTSEE", "Binnenmeer im Norden Europas"], ["ANDEN", "Langes Gebirge in Südamerika"]
+      ]
+    }],
+    "animals": [{
+      "id": "de-animals-001", "title": "Tierwelt 1", "difficulty": "normal",
+      "entries": [
+        ["ELEFANT", "Größtes heute lebendes Landtier"], ["TIGER", "Große gestreifte Raubkatze"], ["LÖWE", "Große Raubkatze, deren Männchen meist eine Mähne tragen"], ["ZEBRA", "Afrikanisches Tier mit schwarzen und weißen Streifen"], ["DELFIN", "Intelligentes Meeressäugetier"], ["WOLF", "Wilder Verwandter des Hundes"], ["BÄR", "Großer Allesfresser mit dichtem Fell"], ["EULE", "Nachtaktiver Vogel mit großen Augen"], ["ADLER", "Großer Greifvogel"], ["PFERD", "Tier, das häufig zum Reiten genutzt wird"], ["KATZE", "Haustier, das schnurrt"], ["HUND", "Häufiger treuer Begleiter des Menschen"]
+      ]
+    }],
+    "sport": [{
+      "id": "de-sport-001", "title": "Sport 1", "difficulty": "normal",
+      "entries": [
+        ["FUSSBALL", "Mannschaftssport mit Ball und Toren"], ["TENNIS", "Rückschlagsport mit Schläger und Netz"], ["BASKETBALL", "Sport, bei dem ein Ball in einen Korb geworfen wird"], ["VOLLEYBALL", "Mannschaftssport über ein hohes Netz"], ["SKIFAHREN", "Wintersport auf Skiern"], ["SCHWIMMEN", "Sport im Wasser"], ["TOR", "Trefferziel im Fußball"], ["SCHLÄGER", "Sportgerät beim Tennis"], ["STADION", "Große Sportstätte mit Zuschauertribünen"], ["MARATHON", "Lauf über 42,195 Kilometer"], ["MEDAILLE", "Auszeichnung für eine sportliche Platzierung"], ["TRAINER", "Person, die Sportler anleitet und vorbereitet"]
+      ]
+    }],
+    "history": [{
+      "id": "de-history-001", "title": "Geschichte 1", "difficulty": "normal",
+      "entries": [
+        ["ROM", "Zentrum des antiken Römischen Reiches"], ["ÄGYPTEN", "Alte Hochkultur am Nil"], ["CAESAR", "Name des berühmten römischen Feldherrn Julius"], ["WIKINGER", "Skandinavische Seefahrer des frühen Mittelalters"], ["PHARAO", "Herrschertitel im alten Ägypten"], ["RENAISSANCE", "Europäische Epoche der Wiederbelebung von Kunst und Wissenschaft"], ["NAPOLEON", "Französischer Feldherr und Kaiser"], ["SPARTA", "Antiker griechischer Stadtstaat mit berühmter Kriegertradition"], ["ATHEN", "Griechischer Stadtstaat, der mit früher Demokratie verbunden ist"], ["KOLUMBUS", "Seefahrer, der 1492 Amerika erreichte"], ["KAISERREICH", "Reich unter der Herrschaft eines Kaisers"], ["MITTELALTER", "Epoche zwischen Antike und Neuzeit"]
+      ]
+    }],
+    "nature": [{
+      "id": "de-nature-001", "title": "Natur 1", "difficulty": "normal",
+      "entries": [
+        ["BERG", "Hohe natürliche Erhebung der Erdoberfläche"], ["FLUSS", "Natürlich fließendes Gewässer"], ["SEE", "Größeres stehendes Gewässer im Landesinneren"], ["OZEAN", "Sehr großes Salzwasserbecken"], ["WALD", "Großes Gebiet, das überwiegend mit Bäumen bedeckt ist"], ["WÜSTE", "Sehr trockenes Gebiet mit wenig Niederschlag"], ["VULKAN", "Öffnung der Erdkruste, aus der Lava austreten kann"], ["GLETSCHER", "Große, langsam fließende Eismasse"], ["INSEL", "Landfläche, die vollständig von Wasser umgeben ist"], ["WASSERFALL", "Stelle, an der Wasser über eine steile Kante fällt"], ["TAL", "Tiefliegendes Gebiet zwischen Bergen oder Hügeln"], ["KÜSTE", "Landstreifen am Meer"]
+      ]
+    }],
+    "film": [{
+      "id": "de-film-001", "title": "Film & TV 1", "difficulty": "normal",
+      "entries": [
+        ["KAMERA", "Gerät zum Aufnehmen von Bildern"], ["SCHAUSPIELER", "Person, die eine Rolle darstellt"], ["REGISSEUR", "Person, die die künstlerische Leitung eines Films übernimmt"], ["SZENE", "Abschnitt eines Films an einem bestimmten Ort oder in einer bestimmten Situation"], ["FILM", "Werk aus bewegten Bildern"], ["KINO", "Ort, an dem Filme vor Publikum gezeigt werden"], ["OSCAR", "Bekannter US-amerikanischer Filmpreis"], ["TRAILER", "Kurze Werbevorschau auf einen Film"], ["KOSTÜM", "Kleidung für eine Figur in Film oder Theater"], ["SCHNITT", "Zusammenfügen und Anordnen von Filmaufnahmen"], ["DREHBUCH", "Schriftliche Vorlage mit Handlung, Szenen und Dialogen"], ["PREMIERE", "Erste öffentliche Aufführung oder Vorführung"]
+      ]
+    }],
+    "music": [{
+      "id": "de-music-001", "title": "Musik 1", "difficulty": "normal",
+      "entries": [
+        ["GITARRE", "Saiteninstrument, das gezupft oder angeschlagen wird"], ["KLAVIER", "Tasteninstrument mit Saiten und Hämmern"], ["SCHLAGZEUG", "Gruppe von Schlaginstrumenten in vielen Bands"], ["VIOLINE", "Streichinstrument mit vier Saiten"], ["LIED", "Musikstück, das gesungen werden kann"], ["RHYTHMUS", "Zeitliche Gliederung von Schlägen und Dauern in der Musik"], ["MELODIE", "Folge von Tönen, die eine erkennbare musikalische Linie bildet"], ["KONZERT", "Öffentliche musikalische Aufführung"], ["ORCHESTER", "Großes Ensemble von Instrumentalmusikern"], ["SÄNGER", "Person, die Musik mit der Stimme ausführt"], ["NOTE", "Zeichen für einen musikalischen Ton"], ["REFRAIN", "Wiederkehrender Abschnitt eines Liedes"]
+      ]
+    }],
+    "cars": [{
+      "id": "de-cars-001", "title": "Autos 1", "difficulty": "normal",
+      "entries": [
+        ["MOTOR", "Maschine, die ein Fahrzeug antreibt"], ["REIFEN", "Gummiteil des Rades mit Kontakt zur Straße"], ["BREMSE", "System zum Verlangsamen oder Anhalten eines Fahrzeugs"], ["LENKRAD", "Bedienelement zum Steuern der Fahrtrichtung"], ["GETRIEBE", "Bauteil zur Änderung der Übersetzung zwischen Motor und Rädern"], ["BATTERIE", "Elektrischer Energiespeicher im Fahrzeug"], ["BENZIN", "Kraftstoff für viele Ottomotoren"], ["DIESEL", "Kraftstoff für Motoren mit Kompressionszündung"], ["STOSSFÄNGER", "Karosserieteil an Front oder Heck eines Autos"], ["SCHEINWERFER", "Vordere Leuchte zur Ausleuchtung der Straße"], ["KÜHLER", "Bauteil des Motorkühlsystems zur Wärmeabgabe"], ["TURBO", "Kurzbezeichnung für einen Turbolader"]
+      ]
+    }],
+    "science": [{
+      "id": "de-science-001", "title": "Wissenschaft 1", "difficulty": "normal",
+      "entries": [
+        ["ATOM", "Kleinste Einheit eines chemischen Elements mit dessen Eigenschaften"], ["MOLEKÜL", "Verbund aus zwei oder mehr chemisch gebundenen Atomen"], ["PLANET", "Himmelskörper, der einen Stern umkreist"], ["GALAXIE", "Großes System aus Sternen, Gas, Staub und dunkler Materie"], ["GRAVITATION", "Anziehungskraft zwischen Körpern mit Masse"], ["ENERGIE", "Physikalische Größe, die mit der Fähigkeit verbunden ist, Arbeit zu verrichten"], ["SAUERSTOFF", "Chemisches Element mit dem Symbol O"], ["WASSERSTOFF", "Leichtestes chemisches Element"], ["ZELLE", "Grundlegende strukturelle und funktionelle Einheit von Lebewesen"], ["GEN", "Abschnitt des Erbguts mit biologischer Information"], ["LASER", "Gerät zur Erzeugung kohärenten Lichts"], ["PHOTON", "Quant elektromagnetischer Strahlung"]
+      ]
+    }]
+  }
+}
