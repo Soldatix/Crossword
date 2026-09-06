@@ -42,7 +42,8 @@
     }
   };
 
-  const cache = new Map();
+  const categoryCache = new Map();
+  const languageCache = new Map();
   let activeLibraryCategory = null;
 
   function currentUiLanguage() {
@@ -85,18 +86,53 @@
   }
 
   async function loadLanguageLibrary(lang) {
-    if (cache.has(lang)) return cache.get(lang);
+    if (languageCache.has(lang)) return languageCache.get(lang);
     const promise = fetch(`puzzles/${lang}/library.json`, { cache: 'no-cache' }).then(async response => {
       if (!response.ok) throw new Error(`Library ${lang}: HTTP ${response.status}`);
       const data = await response.json();
       if (!data || data.language !== lang || !data.categories) throw new Error(`Library ${lang}: invalid data`);
       return data;
     });
-    cache.set(lang, promise);
+    languageCache.set(lang, promise);
     try {
       return await promise;
     } catch (error) {
-      cache.delete(lang);
+      languageCache.delete(lang);
+      throw error;
+    }
+  }
+
+  async function loadCategoryPuzzles(lang, category) {
+    const key = `${lang}/${category}`;
+    if (categoryCache.has(key)) return categoryCache.get(key);
+
+    const promise = (async () => {
+      try {
+        const response = await fetch(`puzzles/${lang}/${category}.json`, { cache: 'no-cache' });
+        if (response.ok) {
+          const data = await response.json();
+          if (!data || data.language !== lang || data.category !== category || !Array.isArray(data.puzzles)) {
+            throw new Error(`Category ${key}: invalid data`);
+          }
+          if (!data.puzzles.length) throw new Error(`Category ${key}: empty`);
+          return data.puzzles;
+        }
+        if (response.status !== 404) throw new Error(`Category ${key}: HTTP ${response.status}`);
+      } catch (error) {
+        if (!(error instanceof TypeError)) throw error;
+      }
+
+      const library = await loadLanguageLibrary(lang);
+      const puzzles = library.categories?.[category];
+      if (!Array.isArray(puzzles) || !puzzles.length) throw new Error(`No puzzles for ${key}`);
+      return puzzles;
+    })();
+
+    categoryCache.set(key, promise);
+    try {
+      return await promise;
+    } catch (error) {
+      categoryCache.delete(key);
       throw error;
     }
   }
@@ -134,10 +170,7 @@
     loadButton.textContent = labels[currentUiLanguage()].loading;
 
     try {
-      const library = await loadLanguageLibrary(lang);
-      const puzzles = library.categories?.[category];
-      if (!Array.isArray(puzzles) || !puzzles.length) throw new Error(`No puzzles for ${lang}/${category}`);
-
+      const puzzles = await loadCategoryPuzzles(lang, category);
       const item = pickNextPuzzle(lang, category, puzzles);
       const entries = item.entries.map(([answer, clue]) => ({ answer, clue }));
       const seed = Number.isInteger(item.seed) ? item.seed : app.hashString(`${item.id}|AppsGamesCrossword`);
