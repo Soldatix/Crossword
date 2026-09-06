@@ -38,6 +38,12 @@
       await loadScript('app-core.js');
       await loadScript('replay.js');
     }
+
+    try {
+      await loadScript('flags.js');
+    } catch (error) {
+      console.warn('Crossword SVG language flags could not be loaded.', error);
+    }
   }
 
   boot();
