@@ -19,9 +19,9 @@
     "hr": 100,
     "en": 100,
     "de": 100,
-    "it": 10,
+    "it": 100,
     "es": 10,
-    "total": 320
+    "total": 410
   },
-  "notes": "Category files are loaded on demand. Croatian, English and German now each provide 10 puzzles in every category. The loader automatically merges numbered shards, allowing the library to grow without increasing the initial page payload. Older per-language library files remain as a compatibility fallback while Italian and Spanish are expanded."
+  "notes": "Category files are loaded on demand. Croatian, English, German and Italian now each provide 10 puzzles in every category. The loader automatically merges numbered shards, allowing the library to grow without increasing the initial page payload. The older per-language library files remain as a compatibility fallback while Spanish is expanded."
 }
