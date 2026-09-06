@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "language": "es",
+  "categories": {
+    "general": [{
+      "id": "es-general-001", "title": "Cultura general 1", "difficulty": "normal",
+      "entries": [
+        ["MADRID", "Capital de España"], ["EURO", "Moneda utilizada por muchos países de la Unión Europea"], ["SOL", "Estrella en el centro del Sistema Solar"], ["CAFÉ", "Bebida popular preparada con granos tostados"], ["INTERNET", "Red global que conecta ordenadores y dispositivos"], ["EUROPA", "Continente que incluye España, Francia e Italia"], ["PIANO", "Instrumento musical de teclado"], ["AGUA", "Líquido esencial para la vida"], ["LIBRO", "Obra escrita o impresa destinada a la lectura"], ["LUNA", "Satélite natural de la Tierra"], ["RELOJ", "Dispositivo que mide o indica el tiempo"], ["OXÍGENO", "Gas necesario para la respiración humana"]
+      ]
+    }],
+    "geography": [{
+      "id": "es-geography-001", "title": "Geografía 1", "difficulty": "normal",
+      "entries": [
+        ["ALPES", "Cordillera que atraviesa Suiza y otros países europeos"], ["DANUBIO", "Gran río europeo que atraviesa varios países"], ["SAHARA", "Gran desierto del norte de África"], ["AMAZONAS", "Gran río de América del Sur"], ["PACÍFICO", "El océano más grande de la Tierra"], ["ÁFRICA", "Continente al sur de Europa"], ["EUROPA", "Continente al oeste de Asia"], ["ASIA", "El continente más grande"], ["NILO", "Famoso río que atraviesa Egipto"], ["ADRIÁTICO", "Mar entre Italia y la península balcánica"], ["BÁLTICO", "Mar del norte de Europa"], ["ANDES", "Larga cordillera de América del Sur"]
+      ]
+    }],
+    "animals": [{
+      "id": "es-animals-001", "title": "Mundo animal 1", "difficulty": "normal",
+      "entries": [
+        ["ELEFANTE", "El animal terrestre vivo más grande"], ["TIGRE", "Gran felino con rayas"], ["LEÓN", "Gran felino cuyo macho suele tener melena"], ["CEBRA", "Animal africano con rayas blancas y negras"], ["DELFÍN", "Mamífero marino inteligente"], ["LOBO", "Pariente salvaje del perro"], ["OSO", "Gran omnívoro de pelaje espeso"], ["BÚHO", "Ave nocturna de grandes ojos"], ["ÁGUILA", "Gran ave rapaz"], ["CABALLO", "Animal utilizado con frecuencia para montar"], ["GATO", "Mascota doméstica que ronronea"], ["PERRO", "Compañero doméstico común y fiel"]
+      ]
+    }],
+    "sport": [{
+      "id": "es-sport-001", "title": "Deporte 1", "difficulty": "normal",
+      "entries": [
+        ["FÚTBOL", "Deporte de equipo con balón y porterías"], ["TENIS", "Deporte de raqueta jugado sobre una red"], ["BALONCESTO", "Deporte en el que se lanza una pelota a una canasta"], ["VOLEIBOL", "Deporte de equipo jugado por encima de una red"], ["ESQUÍ", "Deporte de invierno practicado sobre esquís"], ["NATACIÓN", "Deporte practicado en el agua"], ["GOL", "Punto marcado al introducir el balón en la portería"], ["RAQUETA", "Implemento usado en el tenis"], ["ESTADIO", "Gran recinto deportivo con gradas"], ["MARATÓN", "Carrera de 42,195 kilómetros"], ["MEDALLA", "Premio otorgado a menudo a los mejores deportistas"], ["ENTRENADOR", "Persona que prepara y dirige a los deportistas"]
+      ]
+    }],
+    "history": [{
+      "id": "es-history-001", "title": "Historia 1", "difficulty": "normal",
+      "entries": [
+        ["ROMA", "Centro del antiguo Imperio romano"], ["EGIPTO", "Antigua civilización desarrollada junto al Nilo"], ["CÉSAR", "Nombre asociado al dirigente romano Julio"], ["VIKINGO", "Marino escandinavo de la Alta Edad Media"], ["FARAÓN", "Gobernante del antiguo Egipto"], ["RENACIMIENTO", "Época europea de renovación artística y cultural"], ["NAPOLEÓN", "Militar y emperador francés"], ["ESPARTA", "Polis griega famosa por su tradición guerrera"], ["ATENAS", "Polis griega vinculada al desarrollo temprano de la democracia"], ["COLÓN", "Navegante que llegó a América en 1492"], ["IMPERIO", "Gran territorio gobernado por una autoridad soberana central"], ["EDADMEDIA", "Periodo histórico entre la Antigüedad y la Edad Moderna"]
+      ]
+    }],
+    "nature": [{
+      "id": "es-nature-001", "title": "Naturaleza 1", "difficulty": "normal",
+      "entries": [
+        ["MONTAÑA", "Elevación natural alta de la superficie terrestre"], ["RÍO", "Corriente natural de agua"], ["LAGO", "Masa de agua interior rodeada de tierra"], ["OCÉANO", "Enorme extensión de agua salada"], ["BOSQUE", "Gran área cubierta principalmente por árboles"], ["DESIERTO", "Región muy seca con pocas precipitaciones"], ["VOLCÁN", "Abertura de la corteza terrestre por la que puede salir lava"], ["GLACIAR", "Gran masa de hielo que se mueve lentamente"], ["ISLA", "Tierra completamente rodeada de agua"], ["CASCADA", "Lugar donde el agua cae por un desnivel pronunciado"], ["VALLE", "Zona baja entre colinas o montañas"], ["COSTA", "Franja de tierra junto al mar"]
+      ]
+    }],
+    "film": [{
+      "id": "es-film-001", "title": "Cine y TV 1", "difficulty": "normal",
+      "entries": [
+        ["CÁMARA", "Dispositivo utilizado para grabar imágenes"], ["ACTOR", "Persona que interpreta un papel"], ["DIRECTOR", "Persona que dirige artísticamente una película"], ["ESCENA", "Parte de una película situada en un lugar o momento determinado"], ["PELÍCULA", "Obra audiovisual compuesta por imágenes en movimiento"], ["CINE", "Lugar donde se proyectan películas al público"], ["OSCAR", "Conocido premio cinematográfico estadounidense"], ["TRÁILER", "Breve avance promocional de una película"], ["VESTUARIO", "Ropa preparada para los personajes de una producción"], ["MONTAJE", "Proceso de ordenar y unir las tomas grabadas"], ["GUION", "Texto escrito con trama, escenas y diálogos"], ["ESTRENO", "Primera exhibición pública de una película"]
+      ]
+    }],
+    "music": [{
+      "id": "es-music-001", "title": "Música 1", "difficulty": "normal",
+      "entries": [
+        ["GUITARRA", "Instrumento de cuerda que se toca pulsando o rasgueando"], ["PIANO", "Instrumento de teclado con cuerdas y martillos"], ["BATERÍA", "Conjunto de instrumentos de percusión común en muchas bandas"], ["VIOLÍN", "Instrumento de arco con cuatro cuerdas"], ["CANCIÓN", "Composición musical destinada al canto"], ["RITMO", "Organización temporal de sonidos y acentos"], ["MELODÍA", "Sucesión de notas que forma una línea musical reconocible"], ["CONCIERTO", "Interpretación musical pública"], ["ORQUESTA", "Gran conjunto de músicos instrumentistas"], ["CANTANTE", "Persona que interpreta música con la voz"], ["NOTA", "Símbolo o sonido que representa una altura musical"], ["ESTRIBILLO", "Parte de una canción que se repite"]
+      ]
+    }],
+    "cars": [{
+      "id": "es-cars-001", "title": "Automóviles 1", "difficulty": "normal",
+      "entries": [
+        ["MOTOR", "Máquina que proporciona la fuerza para mover un vehículo"], ["NEUMÁTICO", "Parte de goma de la rueda que toca la carretera"], ["FRENO", "Sistema utilizado para reducir la velocidad o detener el vehículo"], ["VOLANTE", "Mando con el que el conductor cambia la dirección"], ["CAMBIO", "Mecanismo que modifica las relaciones de transmisión"], ["BATERÍA", "Unidad que almacena energía eléctrica en el vehículo"], ["GASOLINA", "Combustible líquido para muchos motores de encendido por chispa"], ["DIÉSEL", "Combustible para motores de encendido por compresión"], ["PARACHOQUES", "Pieza de la carrocería situada delante o detrás del coche"], ["FARO", "Luz delantera que ilumina la carretera"], ["RADIADOR", "Parte del sistema de refrigeración que disipa calor"], ["TURBO", "Nombre corto del turbocompresor"]
+      ]
+    }],
+    "science": [{
+      "id": "es-science-001", "title": "Ciencia 1", "difficulty": "normal",
+      "entries": [
+        ["ÁTOMO", "Unidad más pequeña de un elemento que conserva sus propiedades químicas"], ["MOLÉCULA", "Conjunto de dos o más átomos unidos químicamente"], ["PLANETA", "Cuerpo celeste que orbita una estrella"], ["GALAXIA", "Gran sistema de estrellas, gas, polvo y materia oscura"], ["GRAVEDAD", "Fuerza de atracción entre cuerpos con masa"], ["ENERGÍA", "Magnitud física asociada a la capacidad de realizar trabajo"], ["OXÍGENO", "Elemento químico con símbolo O"], ["HIDRÓGENO", "Elemento químico más ligero"], ["CÉLULA", "Unidad estructural y funcional básica de los seres vivos"], ["GEN", "Unidad de información hereditaria contenida en el ADN"], ["LÁSER", "Dispositivo que produce luz coherente"], ["FOTÓN", "Cuanto de radiación electromagnética"]
+      ]
+    }]
+  }
+}
