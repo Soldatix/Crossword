@@ -9,6 +9,9 @@
   <meta name="author" content="Apps&Games">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#101936">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/crossword-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/crossword-180.png">
   <link rel="canonical" href="https://crossword.appsandgames.org/">
 
   <meta property="og:type" content="website">
@@ -332,6 +335,18 @@
     </div>
   </template>
 
-  <script src="app.js"></script>
+  <aside class="install-panel" id="installPanel" hidden aria-live="polite">
+    <div>
+      <strong id="installTitle">Install Crossword</strong>
+      <p id="installMessage">Install this web app for quick access from your device.</p>
+    </div>
+    <div class="install-actions">
+      <button class="button primary compact" id="installAppButton" type="button">Install</button>
+      <button class="button ghost compact" id="dismissInstallButton" type="button">Not now</button>
+    </div>
+  </aside>
+
+  <script type="module" src="/app.js"></script>
+  <script type="module" src="/pwa.js"></script>
 </body>
 </html>

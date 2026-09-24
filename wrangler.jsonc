@@ -1,8 +1,8 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
+  "$schema": "https://developers.cloudflare.com/schema/wrangler.json",
   "name": "crossword",
   "compatibility_date": "2026-09-06",
   "assets": {
-    "directory": "./"
+    "directory": "./dist"
   }
 }
