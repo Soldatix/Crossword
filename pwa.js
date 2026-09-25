@@ -77,12 +77,17 @@ let installState = isStandalone() ? 'installed' : 'waiting';
 let installTimer = null;
 
 function currentLanguage() {
+  const selected = languageSelect?.value;
+  if (selected && translations[selected]) return selected;
+
+  const documentLanguage = (document.documentElement.lang || '').slice(0, 2).toLowerCase();
+  if (translations[documentLanguage]) return documentLanguage;
+
   const saved = localStorage.getItem('ag-crossword-ui-language');
   if (saved && translations[saved]) return saved;
+
   const browser = (navigator.language || 'en').slice(0, 2).toLowerCase();
-  if (translations[browser]) return browser;
-  const selected = languageSelect?.value;
-  return selected && translations[selected] ? selected : 'en';
+  return translations[browser] ? browser : 'en';
 }
 
 function stripInstallRequest() {
@@ -141,6 +146,13 @@ displayMode.addEventListener?.('change', () => {
   if (isStandalone()) setInstallState('installed');
 });
 languageSelect?.addEventListener('change', renderInstallPanel);
+
+const languageObserver = new MutationObserver(mutations => {
+  if (mutations.some(mutation => mutation.attributeName === 'lang')) {
+    renderInstallPanel();
+  }
+});
+languageObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
 installButton?.addEventListener('click', async () => {
   if (!installActive || installState === 'installing') return;
