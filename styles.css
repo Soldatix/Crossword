@@ -359,32 +359,51 @@ footer a:hover { color: var(--primary); }
 }
 
 .install-panel {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 1200;
-  width: min(440px, calc(100vw - 36px));
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
   gap: 16px;
-  padding: 16px;
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 18px 20px;
   border: 1px solid var(--border-strong);
-  border-radius: 16px;
-  background: var(--surface);
+  border-radius: 20px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--surface) 94%, var(--primary) 6%), var(--surface));
   color: var(--text);
   box-shadow: var(--shadow);
 }
 
 .install-panel[hidden] { display: none !important; }
-.install-panel strong { display: block; margin-bottom: 4px; }
-.install-panel p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.45; }
-.install-actions { display: flex; flex: 0 0 auto; gap: 8px; }
+.install-panel-icon {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid color-mix(in srgb, var(--primary) 58%, transparent);
+  border-radius: 15px;
+  color: #071019;
+  background: linear-gradient(135deg, var(--primary), var(--cyan));
+  box-shadow: 0 10px 28px color-mix(in srgb, var(--primary) 22%, transparent);
+}
+.install-panel-icon svg { width: 25px; height: 25px; }
+.install-panel-copy { min-width: 0; }
+.install-panel strong { display: block; margin-bottom: 5px; font-size: 1rem; }
+.install-panel p { margin: 0; line-height: 1.45; }
+.install-description { color: var(--muted); font-size: .88rem; }
+.install-status { margin-top: 6px !important; color: var(--primary); font-size: .82rem; font-weight: 800; }
+.install-actions { display: flex; flex: 0 0 auto; align-items: center; gap: 10px; }
+.install-actions .button { min-height: 44px; white-space: nowrap; }
 
-@media (max-width: 620px) {
-  .install-panel { left: 12px; right: 12px; bottom: 12px; width: auto; align-items: stretch; flex-direction: column; }
-  .install-actions { width: 100%; }
-  .install-actions .button { flex: 1 1 50%; }
+@media (max-width: 760px) {
+  .install-panel { grid-template-columns: auto minmax(0, 1fr); align-items: start; }
+  .install-actions { grid-column: 1 / -1; padding-left: 66px; }
+}
+
+@media (max-width: 460px) {
+  .install-panel { grid-template-columns: 1fr; gap: 12px; padding: 16px; }
+  .install-panel-icon { width: 44px; height: 44px; border-radius: 13px; }
+  .install-actions { grid-column: auto; padding-left: 0; flex-direction: column; align-items: stretch; }
+  .install-actions .button { width: 100%; }
 }
 
 @media print {

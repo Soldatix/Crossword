@@ -111,6 +111,25 @@
         </div>
       </section>
 
+      <aside class="install-panel" id="installPanel" hidden aria-labelledby="installTitle">
+        <div class="install-panel-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 3v11"></path>
+            <path d="m7.5 10 4.5 4.5 4.5-4.5"></path>
+            <path d="M5 18.5h14"></path>
+          </svg>
+        </div>
+        <div class="install-panel-copy">
+          <strong id="installTitle">Install Crossword</strong>
+          <p class="install-description" id="installDescription">Install the web app for quick access from your device.</p>
+          <p class="install-status" id="installMessage" role="status" aria-live="polite">Checking whether this browser can install the app…</p>
+        </div>
+        <div class="install-actions">
+          <button class="button primary compact" id="installAppButton" type="button">Install Web App</button>
+          <button class="button ghost compact" id="dismissInstallButton" type="button">Continue in browser</button>
+        </div>
+      </aside>
+
       <nav class="mode-tabs" aria-label="Crossword mode">
         <button class="mode-tab active" data-mode="create" type="button"><span aria-hidden="true">✚</span><span data-i18n="createMode">Create Crossword</span></button>
         <button class="mode-tab" data-mode="play" type="button"><span aria-hidden="true">▶</span><span data-i18n="playMode">Play Crossword</span></button>
@@ -334,17 +353,6 @@
       <button class="remove-row" type="button" aria-label="Remove word">×</button>
     </div>
   </template>
-
-  <aside class="install-panel" id="installPanel" hidden aria-live="polite">
-    <div>
-      <strong id="installTitle">Install Crossword</strong>
-      <p id="installMessage">Install this web app for quick access from your device.</p>
-    </div>
-    <div class="install-actions">
-      <button class="button primary compact" id="installAppButton" type="button">Install</button>
-      <button class="button ghost compact" id="dismissInstallButton" type="button">Not now</button>
-    </div>
-  </aside>
 
   <script type="module" src="/app.js"></script>
   <script type="module" src="/pwa.js"></script>
