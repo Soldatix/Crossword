@@ -1,43 +1,58 @@
 const translations = {
   en: {
     title: 'Install Crossword',
-    prompt: 'Install this web app for quick access from your device.',
-    guide: 'Use your browser menu and choose Install app or Add to Home Screen.',
-    install: 'Install',
-    dismiss: 'Not now',
-    installed: 'Crossword was installed.'
+    waiting: 'Checking whether this browser can install the app…',
+    ready: 'The app is ready to install.',
+    installing: 'Installation requested. Complete the browser prompt.',
+    installed: 'Crossword is installed on this device.',
+    dismissed: 'Installation was cancelled. You can try again by reopening this install page.',
+    unavailable: 'Automatic installation is not available in this browser. You can continue in the browser and use Install App or Add to Home Screen when available.',
+    install: 'Install Web App',
+    continue: 'Continue in browser'
   },
   hr: {
     title: 'Instaliraj Crossword',
-    prompt: 'Instalirajte ovu web-aplikaciju za brzi pristup s uređaja.',
-    guide: 'U izborniku preglednika odaberite Instaliraj aplikaciju ili Dodaj na početni zaslon.',
-    install: 'Instaliraj',
-    dismiss: 'Ne sada',
-    installed: 'Crossword je instaliran.'
+    waiting: 'Provjerava se podržava li ovaj preglednik instalaciju…',
+    ready: 'Aplikacija je spremna za instalaciju.',
+    installing: 'Instalacija je zatražena. Dovršite postupak u poruci preglednika.',
+    installed: 'Crossword je instaliran na ovom uređaju.',
+    dismissed: 'Instalacija je otkazana. Možete pokušati ponovno otvaranjem ove stranice za instalaciju.',
+    unavailable: 'Automatska instalacija nije dostupna u ovom pregledniku. Nastavite u pregledniku i upotrijebite Instaliraj aplikaciju ili Dodaj na početni zaslon kada je dostupno.',
+    install: 'Instaliraj Web App',
+    continue: 'Nastavi u pregledniku'
   },
   de: {
     title: 'Crossword installieren',
-    prompt: 'Installiere diese Web-App für schnellen Zugriff auf deinem Gerät.',
-    guide: 'Öffne das Browsermenü und wähle App installieren oder Zum Startbildschirm hinzufügen.',
-    install: 'Installieren',
-    dismiss: 'Nicht jetzt',
-    installed: 'Crossword wurde installiert.'
+    waiting: 'Es wird geprüft, ob dieser Browser die Installation unterstützt…',
+    ready: 'Die App ist zur Installation bereit.',
+    installing: 'Installation angefordert. Schließe die Browser-Abfrage ab.',
+    installed: 'Crossword ist auf diesem Gerät installiert.',
+    dismissed: 'Die Installation wurde abgebrochen. Öffne diese Installationsseite erneut, um es noch einmal zu versuchen.',
+    unavailable: 'Die automatische Installation ist in diesem Browser nicht verfügbar. Du kannst im Browser fortfahren und, sofern verfügbar, App installieren oder Zum Startbildschirm hinzufügen verwenden.',
+    install: 'Web-App installieren',
+    continue: 'Im Browser fortfahren'
   },
   it: {
     title: 'Installa Crossword',
-    prompt: 'Installa questa web app per accedervi rapidamente dal dispositivo.',
-    guide: 'Apri il menu del browser e scegli Installa app o Aggiungi alla schermata Home.',
-    install: 'Installa',
-    dismiss: 'Non ora',
-    installed: 'Crossword è stato installato.'
+    waiting: 'Verifica della possibilità di installare l’app in questo browser…',
+    ready: 'L’app è pronta per l’installazione.',
+    installing: 'Installazione richiesta. Completa la richiesta del browser.',
+    installed: 'Crossword è installato su questo dispositivo.',
+    dismissed: 'L’installazione è stata annullata. Riapri questa pagina di installazione per riprovare.',
+    unavailable: 'L’installazione automatica non è disponibile in questo browser. Puoi continuare nel browser e usare Installa app o Aggiungi alla schermata Home quando disponibile.',
+    install: 'Installa Web App',
+    continue: 'Continua nel browser'
   },
   es: {
     title: 'Instalar Crossword',
-    prompt: 'Instala esta aplicación web para acceder rápidamente desde tu dispositivo.',
-    guide: 'Abre el menú del navegador y elige Instalar aplicación o Añadir a la pantalla de inicio.',
-    install: 'Instalar',
-    dismiss: 'Ahora no',
-    installed: 'Crossword se ha instalado.'
+    waiting: 'Comprobando si este navegador permite instalar la aplicación…',
+    ready: 'La aplicación está lista para instalarse.',
+    installing: 'Instalación solicitada. Completa el aviso del navegador.',
+    installed: 'Crossword está instalado en este dispositivo.',
+    dismissed: 'La instalación se canceló. Vuelve a abrir esta página de instalación para intentarlo de nuevo.',
+    unavailable: 'La instalación automática no está disponible en este navegador. Puedes continuar en el navegador y usar Instalar aplicación o Añadir a pantalla de inicio cuando esté disponible.',
+    install: 'Instalar Web App',
+    continue: 'Continuar en el navegador'
   }
 };
 
@@ -45,13 +60,15 @@ const panel = document.getElementById('installPanel');
 const title = document.getElementById('installTitle');
 const message = document.getElementById('installMessage');
 const installButton = document.getElementById('installAppButton');
-const dismissButton = document.getElementById('dismissInstallButton');
+const continueButton = document.getElementById('dismissInstallButton');
 const languageSelect = document.getElementById('uiLanguage');
 
 let deferredInstallPrompt = null;
-let installCompleted = localStorage.getItem('crosswordPwaInstalled') === '1';
-let installDismissed = sessionStorage.getItem('crosswordInstallDismissed') === '1';
-const installRequested = new URLSearchParams(window.location.search).get('install') === 'web';
+let installActive = new URLSearchParams(window.location.search).get('install') === 'web';
+const displayMode = window.matchMedia('(display-mode: standalone)');
+const isStandalone = () => displayMode.matches || window.navigator.standalone === true;
+let installState = isStandalone() ? 'installed' : 'waiting';
+let installTimer = null;
 
 function currentLanguage() {
   const saved = localStorage.getItem('ag-crossword-ui-language');
@@ -60,10 +77,6 @@ function currentLanguage() {
   if (translations[browser]) return browser;
   const selected = languageSelect?.value;
   return selected && translations[selected] ? selected : 'en';
-}
-
-function isStandalone() {
-  return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
 }
 
 function stripInstallRequest() {
@@ -76,59 +89,90 @@ function stripInstallRequest() {
 
 function renderInstallPanel() {
   if (!panel) return;
-  if (!installRequested || isStandalone() || installCompleted || installDismissed) {
+  if (!installActive) {
     panel.hidden = true;
     return;
   }
 
+  if (isStandalone()) installState = 'installed';
   const t = translations[currentLanguage()];
   title.textContent = t.title;
-  message.textContent = deferredInstallPrompt ? t.prompt : t.guide;
+  message.textContent = t[installState] || t.unavailable;
   installButton.textContent = t.install;
-  dismissButton.textContent = t.dismiss;
-  installButton.hidden = !deferredInstallPrompt;
+  continueButton.textContent = t.continue;
+  installButton.hidden = false;
+  installButton.disabled = installState !== 'ready';
   panel.hidden = false;
 }
 
-window.addEventListener('beforeinstallprompt', (event) => {
-  event.preventDefault();
-  deferredInstallPrompt = event;
-  installCompleted = false;
-  localStorage.removeItem('crosswordPwaInstalled');
+function setInstallState(next) {
+  installState = next;
   renderInstallPanel();
+}
+
+window.addEventListener('beforeinstallprompt', (event) => {
+  if (!installActive) return;
+  event.preventDefault();
+  if (isStandalone()) {
+    setInstallState('installed');
+    return;
+  }
+
+  deferredInstallPrompt = event;
+  clearTimeout(installTimer);
+  setInstallState(typeof event.prompt === 'function' ? 'ready' : 'unavailable');
 });
 
 window.addEventListener('appinstalled', () => {
-  installCompleted = true;
-  localStorage.setItem('crosswordPwaInstalled', '1');
   deferredInstallPrompt = null;
-  stripInstallRequest();
-  if (panel) panel.hidden = true;
+  clearTimeout(installTimer);
+  localStorage.setItem('crosswordPwaInstalled', '1');
+  setInstallState('installed');
 });
 
-window.matchMedia('(display-mode: standalone)').addEventListener?.('change', renderInstallPanel);
+displayMode.addEventListener?.('change', () => {
+  if (isStandalone()) setInstallState('installed');
+});
 languageSelect?.addEventListener('change', renderInstallPanel);
 
 installButton?.addEventListener('click', async () => {
-  if (!deferredInstallPrompt) return;
-  deferredInstallPrompt.prompt();
-  const choice = await deferredInstallPrompt.userChoice;
-  deferredInstallPrompt = null;
-  if (choice.outcome === 'accepted') {
-    installCompleted = true;
-    localStorage.setItem('crosswordPwaInstalled', '1');
-    stripInstallRequest();
-    panel.hidden = true;
-  } else {
-    renderInstallPanel();
+  if (!installActive || installState === 'installing') return;
+  if (isStandalone()) {
+    setInstallState('installed');
+    return;
+  }
+  if (!deferredInstallPrompt || typeof deferredInstallPrompt.prompt !== 'function') {
+    setInstallState('unavailable');
+    return;
+  }
+
+  const prompt = deferredInstallPrompt;
+  setInstallState('installing');
+  try {
+    await prompt.prompt();
+    const choice = await prompt.userChoice;
+    if (isStandalone()) setInstallState('installed');
+    else setInstallState(choice?.outcome === 'accepted' ? 'installing' : 'dismissed');
+  } catch {
+    setInstallState(isStandalone() ? 'installed' : 'unavailable');
+  } finally {
+    deferredInstallPrompt = null;
   }
 });
 
-dismissButton?.addEventListener('click', () => {
-  installDismissed = true;
-  sessionStorage.setItem('crosswordInstallDismissed', '1');
+continueButton?.addEventListener('click', () => {
+  installActive = false;
+  deferredInstallPrompt = null;
+  clearTimeout(installTimer);
+  stripInstallRequest();
   panel.hidden = true;
 });
+
+if (installActive && !isStandalone()) {
+  installTimer = setTimeout(() => {
+    if (installState === 'waiting') setInstallState('unavailable');
+  }, 3000);
+}
 
 if (import.meta.env.PROD && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
