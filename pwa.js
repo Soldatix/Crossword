@@ -1,6 +1,7 @@
 const translations = {
   en: {
     title: 'Install Crossword',
+    description: 'Install the web app for quick access from your device. No traditional installer or Apps & Games account is required.',
     waiting: 'Checking whether this browser can install the app…',
     ready: 'The app is ready to install.',
     installing: 'Installation requested. Complete the browser prompt.',
@@ -12,6 +13,7 @@ const translations = {
   },
   hr: {
     title: 'Instaliraj Crossword',
+    description: 'Instalirajte web-aplikaciju za brži pristup s uređaja. Nije potreban klasični instalacijski program ni Apps & Games račun.',
     waiting: 'Provjerava se podržava li ovaj preglednik instalaciju…',
     ready: 'Aplikacija je spremna za instalaciju.',
     installing: 'Instalacija je zatražena. Dovršite postupak u poruci preglednika.',
@@ -23,6 +25,7 @@ const translations = {
   },
   de: {
     title: 'Crossword installieren',
+    description: 'Installiere die Web-App für schnellen Zugriff auf deinem Gerät. Ein klassisches Installationsprogramm oder Apps-&-Games-Konto ist nicht erforderlich.',
     waiting: 'Es wird geprüft, ob dieser Browser die Installation unterstützt…',
     ready: 'Die App ist zur Installation bereit.',
     installing: 'Installation angefordert. Schließe die Browser-Abfrage ab.',
@@ -34,6 +37,7 @@ const translations = {
   },
   it: {
     title: 'Installa Crossword',
+    description: 'Installa la Web App per un accesso rapido dal dispositivo. Non servono un programma di installazione tradizionale né un account Apps & Games.',
     waiting: 'Verifica della possibilità di installare l’app in questo browser…',
     ready: 'L’app è pronta per l’installazione.',
     installing: 'Installazione richiesta. Completa la richiesta del browser.',
@@ -45,6 +49,7 @@ const translations = {
   },
   es: {
     title: 'Instalar Crossword',
+    description: 'Instala la aplicación web para acceder rápidamente desde tu dispositivo. No necesitas un instalador tradicional ni una cuenta de Apps & Games.',
     waiting: 'Comprobando si este navegador permite instalar la aplicación…',
     ready: 'La aplicación está lista para instalarse.',
     installing: 'Instalación solicitada. Completa el aviso del navegador.',
@@ -58,6 +63,7 @@ const translations = {
 
 const panel = document.getElementById('installPanel');
 const title = document.getElementById('installTitle');
+const description = document.getElementById('installDescription');
 const message = document.getElementById('installMessage');
 const installButton = document.getElementById('installAppButton');
 const continueButton = document.getElementById('dismissInstallButton');
@@ -97,6 +103,7 @@ function renderInstallPanel() {
   if (isStandalone()) installState = 'installed';
   const t = translations[currentLanguage()];
   title.textContent = t.title;
+  description.textContent = t.description;
   message.textContent = t[installState] || t.unavailable;
   installButton.textContent = t.install;
   continueButton.textContent = t.continue;
