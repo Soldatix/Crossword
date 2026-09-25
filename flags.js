@@ -4,11 +4,19 @@
   const SELECT_IDS = ['uiLanguage', 'crosswordLanguage', 'playLanguage'];
 
   const LANGUAGE_NAMES = {
-    hr: 'Hrvatski',
     en: 'English',
+    hr: 'Hrvatski',
     de: 'Deutsch',
     it: 'Italiano',
     es: 'Español'
+  };
+
+  const LANGUAGE_CODES = {
+    en: 'EN',
+    hr: 'HR',
+    de: 'DE',
+    it: 'IT',
+    es: 'ES'
   };
 
   const FLAGS = {
@@ -53,6 +61,8 @@
         box-shadow: 0 0 0 1px rgba(0,0,0,.16);
       }
       .ag-language-button .ag-flag svg, .ag-language-option .ag-flag svg { width: 100%; height: 100%; display: block; }
+      .ag-language-code { font-size: .76em; font-weight: 850; letter-spacing: .04em; opacity: .82; }
+      .ag-language-name { overflow: hidden; text-overflow: ellipsis; }
       .ag-language-chevron { position: absolute; right: 11px; top: 50%; transform: translateY(-50%); font-size: .72rem; color: var(--muted); }
       .ag-language-options {
         position: absolute; z-index: 10000; left: 0; top: calc(100% + 5px); min-width: 100%; width: max-content;
@@ -61,13 +71,13 @@
       }
       .ag-language-menu.open .ag-language-options { display: grid; }
       .ag-language-option {
-        min-width: 165px; min-height: 38px; display: flex; align-items: center; gap: 9px; padding: 7px 10px;
+        min-width: 180px; min-height: 38px; display: grid; grid-template-columns: 24px 30px minmax(0,1fr); align-items: center; gap: 8px; padding: 7px 10px;
         border: 0; border-radius: 8px; background: transparent; color: var(--text); font: inherit; text-align: left; cursor: pointer;
       }
       .ag-language-option:hover, .ag-language-option:focus-visible { outline: none; background: var(--surface-3); }
       .ag-language-option.selected { background: color-mix(in srgb, var(--primary) 13%, var(--surface)); font-weight: 700; }
       @media (max-width: 560px) {
-        .ag-language-option { min-width: 145px; }
+        .ag-language-option { min-width: 170px; grid-template-columns: 22px 28px minmax(0,1fr); }
         .ag-language-button .ag-flag, .ag-language-option .ag-flag { width: 22px; height: 15px; flex-basis: 22px; }
       }
     `;
@@ -117,7 +127,7 @@
       optionButton.className = 'ag-language-option';
       optionButton.dataset.language = language;
       optionButton.setAttribute('role', 'option');
-      optionButton.innerHTML = `${flagMarkup(language)}<span>${name}</span>`;
+      optionButton.innerHTML = `${flagMarkup(language)}<span class="ag-language-code">${LANGUAGE_CODES[language]}</span><span class="ag-language-name">${name}</span>`;
       optionButton.addEventListener('click', event => {
         event.preventDefault();
         event.stopPropagation();
@@ -136,7 +146,7 @@
 
     function updateDisplay() {
       const language = LANGUAGE_NAMES[select.value] ? select.value : 'en';
-      button.innerHTML = `${flagMarkup(language)}<span>${LANGUAGE_NAMES[language]}</span><span class="ag-language-chevron" aria-hidden="true">▼</span>`;
+      button.innerHTML = `${flagMarkup(language)}<span class="ag-language-code">${LANGUAGE_CODES[language]}</span><span class="ag-language-name">${LANGUAGE_NAMES[language]}</span><span class="ag-language-chevron" aria-hidden="true">▼</span>`;
       options.querySelectorAll('.ag-language-option').forEach(optionButton => {
         const selected = optionButton.dataset.language === language;
         optionButton.classList.toggle('selected', selected);
