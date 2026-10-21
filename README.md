@@ -32,3 +32,9 @@ Ready-made puzzles are stored separately from the application code:
 Each language library contains category arrays. New puzzles can be appended to those arrays without changing the main crossword application. The loader remembers the next puzzle position for every language/category, so categories can grow to many puzzles while keeping the app code unchanged.
 
 The app runs entirely in the browser and does not require a backend for creating or solving crosswords.
+
+## Credits / Attribution
+
+If you use our source code to create your own version, we'd appreciate a mention in its About / Info section:
+
+**Based on Crossword by Apps & Games — [appsandgames.org](https://appsandgames.org/)**
