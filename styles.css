@@ -409,3 +409,49 @@ footer a:hover { color: var(--primary); }
 @media print {
   .install-panel { display: none !important; }
 }
+
+/* Original Adsterra responsive banner at page top, before app header.
+ * No empty reserved space without prior advertising consent; no overlay.
+ * 320px mobile iframe is outside .app-shell gutters to avoid clipping. */
+#crossword-ad-area[hidden],
+#crossword-ad-area .crossword-ad-unit[hidden] { display: none !important; }
+#crossword-ad-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 14px 0 8px;
+}
+.crossword-ad-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  text-align: center;
+}
+.crossword-ad-label {
+  color: var(--muted);
+  font: 11px/1.4 system-ui, sans-serif;
+  padding-bottom: 6px;
+}
+.crossword-privacy-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 16px 20px;
+  text-align: center;
+}
+.crossword-privacy-footer .ag-privacy-footer-control {
+  cursor: pointer;
+  padding: 7px 12px;
+}
+@media (max-width: 319px) {
+  #crossword-ad-area { display: none !important; }
+}
+/* On the Play tab hide the banner (without requesting another on return). */
+body:has(.mode-tab[data-mode="play"].active) #crossword-ad-area { display: none !important; }
+@media print {
+  #crossword-ad-area, .crossword-privacy-footer { display: none !important; }
+}
