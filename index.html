@@ -51,12 +51,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://appsandgames.org/privacy-choice.css">
+  <script defer src="https://appsandgames.org/privacy-choice.js"></script>
 
 <meta property="og:image:width" content="1200">
 
 <meta property="og:image:height" content="630">
 </head>
 <body>
+  <!-- Original owner-supplied Adsterra GET CODE; only after advertising consent.
+       Outside the interactive crossword area, above the app header. -->
+  <section id="crossword-ad-area" aria-label="Advertisement" hidden>
+    <div class="crossword-ad-unit" data-size="728x90" hidden>
+      <script src="/crossword-adsterra-loader.js" data-unit="desktop"></script>
+    </div>
+    <div class="crossword-ad-unit" data-size="320x50" hidden>
+      <script src="/crossword-adsterra-loader.js" data-unit="mobile"></script>
+    </div>
+  </section>
   <div class="app-shell">
     <header class="topbar">
       <a class="brand" href="https://appsandgames.org/" aria-label="Apps & Games">
@@ -299,6 +311,8 @@
       <a href="https://appsandgames.org/" data-i18n="backToPortal">Back to Apps & Games</a>
     </footer>
   </div>
+
+  <div class="footer-links crossword-privacy-footer" aria-label="Privacy choices"></div>
 
   <div id="modalBackdrop" class="modal-backdrop hidden"></div>
 
